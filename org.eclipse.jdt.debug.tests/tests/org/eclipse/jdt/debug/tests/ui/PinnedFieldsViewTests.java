@@ -60,10 +60,10 @@ import org.eclipse.ui.IViewPart;
 public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 
 	private static final String TYPE_NAME = "InstanceVariablesTests";
-	private static final String PIN_TO_TOP = "Pin to Top";
-	private static final String MOVE_PIN_UP = "Move Pin Up";
-	private static final String MOVE_PIN_DOWN = "Move Pin Down";
-	private static final String UNPIN_ALL = "Unpin All Fields";
+	protected static final String PIN_TO_TOP = "Pin to Top";
+	protected static final String MOVE_PIN_UP = "Move Pin Up";
+	protected static final String MOVE_PIN_DOWN = "Move Pin Down";
+	protected static final String UNPIN_ALL = "Unpin All Fields";
 	private static final long TIMEOUT = 30_000;
 
 	/**
@@ -118,7 +118,7 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 	/**
 	 * Fails if an error caused by the "Pin to Top" contributions was logged during the test.
 	 */
-	private void assertNoPinError() {
+	protected void assertNoPinError() {
 		for (IStatus status : fLoggedErrors) {
 			StringWriter text = new StringWriter();
 			text.append(status.getMessage());
@@ -314,7 +314,7 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 	 * Launches the test program, suspends it where <code>this</code> is an <code>InstanceVariablesTests</code> and shows
 	 * the given view.
 	 */
-	private TreeViewer launchAndShowThis(String viewId) throws Exception {
+	protected TreeViewer launchAndShowThis(String viewId) throws Exception {
 		fViewId = viewId;
 		ILineBreakpoint bp = createLineBreakpoint(33, TYPE_NAME);
 		fThread = launchToLineBreakpoint(TYPE_NAME, bp);
@@ -331,7 +331,7 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 		return viewer;
 	}
 
-	private void pinRootFromContextMenu(TreeViewer viewer, String field) throws Exception {
+	protected void pinRootFromContextMenu(TreeViewer viewer, String field) throws Exception {
 		withContextMenu(viewer, root(viewer, field), menu -> {
 			MenuItem pin = findItem(menu, PIN_TO_TOP);
 			assertNotNull("Missing 'Pin to Top' in " + itemTexts(menu), pin);
@@ -339,7 +339,7 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 		});
 	}
 
-	private void pinFromContextMenu(TreeViewer viewer, String field) throws Exception {
+	protected void pinFromContextMenu(TreeViewer viewer, String field) throws Exception {
 		withContextMenu(viewer, children(viewer, field), menu -> {
 			MenuItem pin = findItem(menu, PIN_TO_TOP);
 			assertNotNull("Missing 'Pin to Top' in " + itemTexts(menu), pin);
@@ -347,21 +347,21 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 		});
 	}
 
-	private interface MenuCallback {
+	protected interface MenuCallback {
 		void run(Menu menu) throws Exception;
 	}
 
 	/**
 	 * Elements to select in a view, as tree paths computed in the UI thread.
 	 */
-	private record Selected(String description, Callable<TreePath[]> paths) {
+	protected record Selected(String description, Callable<TreePath[]> paths) {
 		@Override
 		public String toString() {
 			return description;
 		}
 	}
 
-	private Selected children(TreeViewer viewer, String... fields) {
+	protected Selected children(TreeViewer viewer, String... fields) {
 		return new Selected(List.of(fields).toString(), () -> {
 			TreeItem root = findRootItem(viewer);
 			List<TreePath> paths = new ArrayList<>();
@@ -376,7 +376,7 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 		});
 	}
 
-	private Selected root(TreeViewer viewer, String name) {
+	protected Selected root(TreeViewer viewer, String name) {
 		return new Selected(name, () -> {
 			TreeItem item = findRootItem(viewer, name);
 			return item == null ? null : new TreePath[] { new TreePath(new Object[] { item.getData() }) };
@@ -388,7 +388,7 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 	 * callback on its items. The selection and the menu are done in the same UI runnable, so that the view cannot
 	 * restore its previous selection (as it does asynchronously after a refresh) before the menu is evaluated.
 	 */
-	private void withContextMenu(TreeViewer viewer, Selected selected, MenuCallback callback) throws Exception {
+	protected void withContextMenu(TreeViewer viewer, Selected selected, MenuCallback callback) throws Exception {
 		waitFor("Cannot open the context menu on " + selected, () -> {
 			TreePath[] paths = selected.paths().call();
 			if (paths == null) {
@@ -418,7 +418,7 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 		processUiEvents(100);
 	}
 
-	private static void click(MenuItem item) {
+	protected static void click(MenuItem item) {
 		assertNotNull("Missing menu item", item);
 		if ((item.getStyle() & SWT.CHECK) != 0) {
 			item.setSelection(!item.getSelection());
@@ -426,7 +426,7 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 		item.notifyListeners(SWT.Selection, new Event());
 	}
 
-	private static MenuItem findItem(Menu menu, String text) {
+	protected static MenuItem findItem(Menu menu, String text) {
 		for (MenuItem item : menu.getItems()) {
 			if (text.equals(cleanText(item))) {
 				return item;
@@ -435,7 +435,7 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 		return null;
 	}
 
-	private static List<String> itemTexts(Menu menu) {
+	protected static List<String> itemTexts(Menu menu) {
 		List<String> texts = new ArrayList<>();
 		for (MenuItem item : menu.getItems()) {
 			texts.add(cleanText(item));
@@ -443,7 +443,7 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 		return texts;
 	}
 
-	private static String cleanText(MenuItem item) {
+	protected static String cleanText(MenuItem item) {
 		String text = item.getText().replace("&", "");
 		int tab = text.indexOf('\t');
 		return tab < 0 ? text : text.substring(0, tab);
@@ -453,7 +453,7 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 	 * Waits until the view shows all the fields of <code>this</code>, in the order computed from the model while no
 	 * field is pinned, and returns that order.
 	 */
-	private List<String> waitForChildren(TreeViewer viewer) throws Exception {
+	protected List<String> waitForChildren(TreeViewer viewer) throws Exception {
 		assertFalse("No field should be pinned yet", PinnedFieldsManager.getDefault().hasPinnedFields());
 		List<String> expected = new ArrayList<>();
 		for (Object field : JavaContentProviderFilter.filterVariables(fThis.getVariables(), new PresentationContext(fViewId))) {
@@ -471,22 +471,22 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 		return expected;
 	}
 
-	private void waitForFirstChildren(TreeViewer viewer, String... fields) throws Exception {
+	protected void waitForFirstChildren(TreeViewer viewer, String... fields) throws Exception {
 		waitFor("Expected first fields " + List.of(fields), () -> startsWith(getChildNames(viewer), fields), () -> getChildNames(viewer));
 	}
 
-	private Image getChildImage(TreeViewer viewer, String field) throws Exception {
+	protected Image getChildImage(TreeViewer viewer, String field) throws Exception {
 		return sync(() -> findChildItem(viewer, field).getImage());
 	}
 
-	private void waitFor(String message, Callable<Boolean> condition) throws Exception {
+	protected void waitFor(String message, Callable<Boolean> condition) throws Exception {
 		waitFor(message, condition, () -> null);
 	}
 
 	/**
 	 * Waits for the condition, and fails with the given message and the state described by the given callable.
 	 */
-	private void waitFor(String message, Callable<Boolean> condition, Callable<Object> state) throws Exception {
+	protected void waitFor(String message, Callable<Boolean> condition, Callable<Object> state) throws Exception {
 		long end = System.currentTimeMillis() + TIMEOUT;
 		while (System.currentTimeMillis() < end) {
 			if (Boolean.TRUE.equals(sync(condition))) {
@@ -498,11 +498,11 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 		fail(shown == null ? message : message + ", shown: " + shown);
 	}
 
-	private static TreeItem findRootItem(TreeViewer viewer) throws DebugException {
+	protected static TreeItem findRootItem(TreeViewer viewer) throws DebugException {
 		return findRootItem(viewer, "this");
 	}
 
-	private static TreeItem findRootItem(TreeViewer viewer, String name) throws DebugException {
+	protected static TreeItem findRootItem(TreeViewer viewer, String name) throws DebugException {
 		for (TreeItem item : viewer.getTree().getItems()) {
 			if (item.getData() instanceof IVariable variable && variable.getName().equals(name)) {
 				return item;
@@ -514,7 +514,7 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 		return null;
 	}
 
-	private static TreeItem findChildItem(TreeViewer viewer, String field) throws DebugException {
+	protected static TreeItem findChildItem(TreeViewer viewer, String field) throws DebugException {
 		TreeItem root = findRootItem(viewer);
 		if (root != null) {
 			for (TreeItem item : root.getItems()) {
@@ -526,11 +526,11 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 		return null;
 	}
 
-	private static boolean startsWith(List<String> names, String... first) {
+	protected static boolean startsWith(List<String> names, String... first) {
 		return names.size() >= first.length && names.subList(0, first.length).equals(List.of(first));
 	}
 
-	private static List<String> getRootNames(TreeViewer viewer) throws DebugException {
+	protected static List<String> getRootNames(TreeViewer viewer) throws DebugException {
 		List<String> names = new ArrayList<>();
 		for (TreeItem item : viewer.getTree().getItems()) {
 			if (item.getData() instanceof IVariable variable) {
@@ -540,7 +540,7 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 		return names;
 	}
 
-	private static List<String> getChildNames(TreeViewer viewer) throws DebugException {
+	protected static List<String> getChildNames(TreeViewer viewer) throws DebugException {
 		List<String> names = new ArrayList<>();
 		TreeItem root = findRootItem(viewer);
 		if (root != null) {

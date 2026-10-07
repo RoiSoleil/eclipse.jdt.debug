@@ -1,0 +1,150 @@
+name: Verify pinned fields in a real Eclipse
+
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: 'Comma separated jobs to run (empty: all)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # the "Pin to Top" tests, with real mouse and keyboard input on Linux
+          - name: pinned-linux
+            os: ubuntu-24.04
+            ref: ''
+            testClass: org.eclipse.jdt.debug.tests.PinnedFieldsSuite
+            javas: "8\n25"
+          # like the Eclipse Jenkins: X server without window manager
+          - name: pinned-linux-nowm
+            os: ubuntu-24.04
+            ref: ''
+            testClass: org.eclipse.jdt.debug.tests.PinnedFieldsSuite
+            javas: "8\n25"
+            nowm: true
+            repeat: 5
+          # like the Eclipse Jenkins: tests on Java 27, X server without window manager
+          - name: pinned-linux-jdk27
+            os: ubuntu-24.04
+            ref: ''
+            testClass: org.eclipse.jdt.debug.tests.PinnedFieldsSuite
+            javas: "8\n27\n25"
+            nowm: true
+            jdk27: true
+            repeat: 5
+          - name: pinned-windows
+            os: windows-latest
+            ref: ''
+            testClass: org.eclipse.jdt.debug.tests.PinnedFieldsSuite
+            javas: "8\n25"
+          - name: pinned-macos
+            os: macos-latest
+            ref: ''
+            testClass: org.eclipse.jdt.debug.tests.PinnedFieldsSuite
+            # no Java 8 for macOS on ARM
+            javas: "25"
+          # the whole JDT Debug test suite with the change...
+          - name: regression
+            os: ubuntu-24.04
+            ref: ''
+            testClass: org.eclipse.jdt.debug.tests.AutomatedSuite
+            javas: "8\n25"
+          # ...and without it, to tell regressions from tests failing anyway
+          - name: baseline
+            os: ubuntu-24.04
+            ref: master
+            testClass: org.eclipse.jdt.debug.tests.AutomatedSuite
+            javas: "8\n25"
+    steps:
+      - uses: actions/checkout@v4
+        if: inputs.only == '' || contains(format(',{0},', inputs.only), format(',{0},', matrix.name))
+        with:
+          ref: ${{ matrix.ref }}
+
+      - uses: actions/setup-java@v4
+        if: inputs.only == '' || contains(format(',{0},', inputs.only), format(',{0},', matrix.name))
+        with:
+          distribution: temurin
+          java-version: ${{ matrix.javas }}
+
+      - name: Install X server, window manager and xdotool
+        if: runner.os == 'Linux' && (inputs.only == '' || contains(format(',{0},', inputs.only), format(',{0},', matrix.name)))
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q xvfb openbox x11-utils xdotool
+
+      - name: Build with the JDT build options and run ${{ matrix.testClass }}
+        if: inputs.only == '' || contains(format(',{0},', inputs.only), format(',{0},', matrix.name))
+        shell: bash
+        env:
+          PIN_SCREENSHOTS: ${{ github.workspace }}/ci-results/screenshots
+          TEST_CLASS: ${{ matrix.testClass }}
+          PIN_REPEAT: ${{ matrix.repeat || 1 }}
+        run: |
+          mkdir -p "$PIN_SCREENSHOTS"
+          if [ "$RUNNER_OS" = "Linux" ]; then
+            export DISPLAY=:99 GDK_BACKEND=x11
+            export NON_MODULAR_JAVA_HOME="$JAVA_HOME_8_X64"
+            Xvfb :99 -screen 0 1600x1000x24 &
+            sleep 3
+            if [ "${{ matrix.nowm }}" != "true" ]; then
+              openbox &
+              sleep 2
+            fi
+          fi
+          EXTRA=""
+          if [ "${{ matrix.jdk27 }}" = "true" ]; then
+            mkdir -p ~/.m2
+            printf '<toolchains><toolchain><type>jdk</type><provides><id>JavaSE-27</id><version>27</version></provides><configuration><jdkHome>%s</jdkHome></configuration></toolchain></toolchains>' "$JAVA_HOME_27_X64" > ~/.m2/toolchains.xml
+            EXTRA="-Ptest-on-javase-27"
+          fi
+          set +e
+          mvn -B -V clean verify $EXTRA \
+            -Papi-check \
+            -pl org.eclipse.jdt.debug.ui,org.eclipse.jdt.debug.tests -am \
+            -Dcompare-version-with-baselines.skip=false \
+            -Dtycho.apitools.debug \
+            -DtestClass="$TEST_CLASS" \
+            -Dmaven.test.failure.ignore=true \
+            -Dproject.build.sourceEncoding=UTF-8 \
+            -DDetectVMInstallationsJob.disabled=true \
+            -DtrimStackTrace=false > ci-results/build.log 2>&1
+          status=$?
+          tail -80 ci-results/build.log
+          echo "MAVEN_EXIT=$status" >> ci-results/status.txt
+          exit $status
+
+      - name: Collect results
+        if: always() && (inputs.only == '' || contains(format(',{0},', inputs.only), format(',{0},', matrix.name)))
+        shell: bash
+        run: |
+          mkdir -p ci-results
+          for d in */target/surefire-reports */target/compilelogs */target/apianalysis; do
+            [ -d "$d" ] && mkdir -p "ci-results/$d" && cp -r "$d"/. "ci-results/$d/"
+          done
+          for f in */target/work/data/.metadata/.log; do
+            [ -f "$f" ] && mkdir -p "ci-results/$(dirname "$f")" && cp "$f" "ci-results/$f"
+          done
+          echo "SHA=$(git rev-parse HEAD)" >> ci-results/status.txt
+          echo "JOB=${{ matrix.name }}" >> ci-results/status.txt
+
+      - name: Publish results to the pin-fields-ci-results-${{ matrix.name }} branch
+        if: always() && (inputs.only == '' || contains(format(',{0},', inputs.only), format(',{0},', matrix.name)))
+        shell: bash
+        run: |
+          cd ci-results
+          git init -q -b results
+          git add -A
+          git -c user.name="ci" -c user.email="ci@users.noreply.github.com" commit -q -m "CI results of ${{ matrix.name }}"
+          git push -q -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:pin-fields-ci-results-${{ matrix.name }}
