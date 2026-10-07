@@ -1,0 +1,48 @@
+!SESSION 2026-10-07 08:13:40.629 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=25.0.4.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -application org.eclipse.tycho.surefire.osgibooter.uitest -testproperties /home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.debug.tests/target/surefire.properties -timeout 2400000
+Command-line arguments:  -data /home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.debug.tests/target/work/data -application org.eclipse.tycho.surefire.osgibooter.uitest -testproperties /home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.debug.tests/target/surefire.properties -consoleLog -timeout 2400000
+
+!ENTRY org.eclipse.e4.ui.css.swt.theme 2 0 2026-10-07 08:13:45.779
+!MESSAGE Theme 'org.eclipse.e4.ui.css.theme.e4_default' not found; falling back to default theme.
+
+!ENTRY org.eclipse.tycho.surefire.osgibooter 1 0 2026-10-07 08:13:47.809
+!MESSAGE starting DumpStackTracesTimer with timeout=2280000 at 2026-10-07 08:13:47 +0000
+
+!ENTRY org.eclipse.jdt.debug 1 0 2026-10-07 08:13:48.642
+!MESSAGE VM added temurin-25-jdk-amd64, location: /usr/lib/jvm/temurin-25-jdk-amd64
+
+!ENTRY org.eclipse.jdt.debug 4 125 2026-10-07 08:14:11.070
+!MESSAGE Internal error logged from JDI Debug: 
+!STACK 0
+com.sun.jdi.VMDisconnectedException: Got IOException from Virtual Machine
+	at org.eclipse.jdi.internal.connect.PacketSendManager.sendPacket(PacketSendManager.java:90)
+	at org.eclipse.jdi.internal.MirrorImpl.requestVM(MirrorImpl.java:202)
+	at org.eclipse.jdi.internal.MirrorImpl.requestVM(MirrorImpl.java:242)
+	at org.eclipse.jdi.internal.MirrorImpl.requestVM(MirrorImpl.java:274)
+	at org.eclipse.jdi.internal.ClassTypeImpl.superclass(ClassTypeImpl.java:306)
+	at org.eclipse.jdt.internal.debug.core.model.JDIClassType.getSuperclass(JDIClassType.java:145)
+	at org.eclipse.jdt.internal.debug.core.logicalstructures.JavaLogicalStructures.getLogicalStructureTypes(JavaLogicalStructures.java:291)
+	at org.eclipse.debug.internal.core.LogicalStructureProvider.getLogicalStructures(LogicalStructureProvider.java:59)
+	at org.eclipse.debug.internal.core.LogicalStructureManager.getLogicalStructureTypes(LogicalStructureManager.java:98)
+	at org.eclipse.debug.core.DebugPlugin.getLogicalStructureTypes(DebugPlugin.java:907)
+	at org.eclipse.jdt.internal.debug.ui.JDIModelPresentation.computeLogicalStructureAdornmentFlags(JDIModelPresentation.java:1158)
+	at org.eclipse.jdt.internal.debug.ui.JDIModelPresentation.getVariableImage(JDIModelPresentation.java:919)
+	at org.eclipse.jdt.internal.debug.ui.JDIModelPresentation.getImage(JDIModelPresentation.java:749)
+	at org.eclipse.debug.internal.ui.LazyModelPresentation.getImage(LazyModelPresentation.java:129)
+	at org.eclipse.debug.internal.ui.DelegatingModelPresentation.getImage(DelegatingModelPresentation.java:138)
+	at org.eclipse.debug.internal.ui.views.launch.DebugElementHelper.getImageDescriptor(DebugElementHelper.java:77)
+	at org.eclipse.debug.internal.ui.model.elements.DebugElementLabelProvider.getImageDescriptor(DebugElementLabelProvider.java:75)
+	at org.eclipse.debug.internal.ui.model.elements.VariableLabelProvider.getImageDescriptor(VariableLabelProvider.java:65)
+	at org.eclipse.debug.internal.ui.model.elements.ElementLabelProvider.getImageDescriptor(ElementLabelProvider.java:287)
+	at org.eclipse.debug.internal.ui.model.elements.ElementLabelProvider.retrieveLabel(ElementLabelProvider.java:199)
+	at org.eclipse.jdt.internal.debug.ui.variables.JavaVariableLabelProvider.retrieveLabel(JavaVariableLabelProvider.java:200)
+	at org.eclipse.debug.internal.ui.model.elements.ElementLabelProvider$LabelUpdater.run(ElementLabelProvider.java:147)
+	at org.eclipse.debug.internal.ui.model.elements.ElementLabelProvider$LabelJob.run(ElementLabelProvider.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-10-07 08:14:50.866
+!MESSAGE The workspace will exit with unsaved changes in this session.

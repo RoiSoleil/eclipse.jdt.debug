@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: org.eclipse.jdt.debug.tests.PinnedFieldsSuite
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 61.82 s -- in org.eclipse.jdt.debug.tests.PinnedFieldsSuite
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testPinIsPersisted -- Time elapsed: 5.127 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testPinnedFieldsAreFirstInPinOrder -- Time elapsed: 1.001 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testPinOrderIsRestoredFromPreference -- Time elapsed: 0.985 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testUnpin -- Time elapsed: 0.951 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testUnpinAll -- Time elapsed: 0.892 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testMovePin -- Time elapsed: 0.928 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testNothingPinned -- Time elapsed: 0.855 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testPinDoesNotApplyToHidingField -- Time elapsed: 0.952 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testPinAppliesToSubtypes -- Time elapsed: 0.925 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testMovePinAtBoundaries -- Time elapsed: 0.788 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testMovePinSkipsPinsNotDisplayed -- Time elapsed: 0.940 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testPinInExpressionsView -- Time elapsed: 3.046 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testPinToTop -- Time elapsed: 1.980 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testUnpinAll -- Time elapsed: 1.839 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testMovePin -- Time elapsed: 1.913 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testRealUserInteraction -- Time elapsed: 38.66 s
