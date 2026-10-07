@@ -1,0 +1,70 @@
+!SESSION 2026-10-07 14:50:38.184 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=25.0.4.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_US
+Framework arguments:  -application org.eclipse.tycho.surefire.osgibooter.uitest -testproperties /Users/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.debug.tests/target/surefire.properties -timeout 2400000
+Command-line arguments:  -data /Users/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.debug.tests/target/work/data -application org.eclipse.tycho.surefire.osgibooter.uitest -testproperties /Users/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.debug.tests/target/surefire.properties -consoleLog -timeout 2400000
+
+!ENTRY org.eclipse.e4.ui.css.swt.theme 2 0 2026-10-07 14:50:42.245
+!MESSAGE Theme 'org.eclipse.e4.ui.css.theme.e4_default' not found; falling back to default theme.
+
+!ENTRY org.eclipse.ui 4 4 2026-10-07 14:50:44.064
+!MESSAGE Unable to create menu item "null", command "org.eclipse.ui.cocoa.minimizeWindow" not defined
+
+!ENTRY org.eclipse.ui 4 4 2026-10-07 14:50:44.065
+!MESSAGE Unable to create menu item "null", command "org.eclipse.ui.cocoa.zoomWindow" not defined
+
+!ENTRY org.eclipse.ui 4 4 2026-10-07 14:50:44.067
+!MESSAGE Unable to create menu item "null", command "org.eclipse.ui.cocoa.arrangeWindowsInFront" not defined
+
+!ENTRY org.eclipse.tycho.surefire.osgibooter 1 0 2026-10-07 14:50:48.090
+!MESSAGE starting DumpStackTracesTimer with timeout=2280000 at 2026-10-07 14:50:48 +0000
+
+!ENTRY org.eclipse.jdt.debug 1 0 2026-10-07 14:50:49.453
+!MESSAGE Default VM changed OpenJDK 25.0.4.1 [25.0.4.1], location: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-101.0/arm64/Contents/Home
+
+!ENTRY org.eclipse.jdt.debug 1 0 2026-10-07 14:50:49.454
+!MESSAGE VM added OpenJDK 25.0.4.1 [25.0.4.1], location: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-101.0/arm64/Contents/Home
+
+!ENTRY org.eclipse.debug.core 4 125 2026-10-07 14:51:22.847
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.io.IOException: Stream closed
+	at java.base/java.io.BufferedInputStream.ensureOpen(BufferedInputStream.java:207)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:379)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.internalRead(OutputStreamMonitor.java:235)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:211)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+!ENTRY org.eclipse.jdt.debug 4 5010 2026-10-07 14:51:35.926
+!MESSAGE com.sun.jdi.VMDisconnectedException: Got IOException from Virtual Machine occurred while retrieving value.
+!STACK 0
+com.sun.jdi.VMDisconnectedException: Got IOException from Virtual Machine
+	at org.eclipse.jdi.internal.connect.PacketReceiveManager.getReply(PacketReceiveManager.java:186)
+	at org.eclipse.jdi.internal.connect.PacketReceiveManager.getReply(PacketReceiveManager.java:205)
+	at org.eclipse.jdi.internal.MirrorImpl.requestVM(MirrorImpl.java:207)
+	at org.eclipse.jdi.internal.MirrorImpl.requestVM(MirrorImpl.java:242)
+	at org.eclipse.jdi.internal.ObjectReferenceImpl.getValues(ObjectReferenceImpl.java:324)
+	at org.eclipse.jdi.internal.ObjectReferenceImpl.getValue(ObjectReferenceImpl.java:207)
+	at org.eclipse.jdt.internal.debug.core.model.JDIFieldVariable.retrieveValue(JDIFieldVariable.java:98)
+	at org.eclipse.jdt.internal.debug.core.model.JDIVariable.getCurrentValue(JDIVariable.java:74)
+	at org.eclipse.jdt.internal.debug.core.model.JDIVariable.getValue(JDIVariable.java:98)
+	at org.eclipse.jdt.internal.debug.ui.JDIModelPresentation.computeLogicalStructureAdornmentFlags(JDIModelPresentation.java:1157)
+	at org.eclipse.jdt.internal.debug.ui.JDIModelPresentation.getVariableImage(JDIModelPresentation.java:919)
+	at org.eclipse.jdt.internal.debug.ui.JDIModelPresentation.getImage(JDIModelPresentation.java:749)
+	at org.eclipse.debug.internal.ui.LazyModelPresentation.getImage(LazyModelPresentation.java:129)
+	at org.eclipse.debug.internal.ui.DelegatingModelPresentation.getImage(DelegatingModelPresentation.java:138)
+	at org.eclipse.debug.internal.ui.views.launch.DebugElementHelper.getImageDescriptor(DebugElementHelper.java:77)
+	at org.eclipse.debug.internal.ui.model.elements.DebugElementLabelProvider.getImageDescriptor(DebugElementLabelProvider.java:75)
+	at org.eclipse.debug.internal.ui.model.elements.VariableLabelProvider.getImageDescriptor(VariableLabelProvider.java:65)
+	at org.eclipse.debug.internal.ui.model.elements.ElementLabelProvider.getImageDescriptor(ElementLabelProvider.java:287)
+	at org.eclipse.debug.internal.ui.model.elements.ElementLabelProvider.retrieveLabel(ElementLabelProvider.java:199)
+	at org.eclipse.jdt.internal.debug.ui.variables.JavaVariableLabelProvider.retrieveLabel(JavaVariableLabelProvider.java:200)
+	at org.eclipse.debug.internal.ui.model.elements.ElementLabelProvider$LabelUpdater.run(ElementLabelProvider.java:147)
+	at org.eclipse.debug.internal.ui.model.elements.ElementLabelProvider$LabelJob.run(ElementLabelProvider.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-10-07 14:51:56.133
+!MESSAGE The workspace will exit with unsaved changes in this session.

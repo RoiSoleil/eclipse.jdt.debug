@@ -1,0 +1,35 @@
+-------------------------------------------------------------------------------
+Test set: org.eclipse.jdt.debug.tests.PinnedFieldsSuite
+-------------------------------------------------------------------------------
+Tests run: 31, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 66.58 s -- in org.eclipse.jdt.debug.tests.PinnedFieldsSuite
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testPinIsPersisted -- Time elapsed: 9.004 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testPinnedFieldsAreFirstInPinOrder -- Time elapsed: 1.142 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testPinOrderIsRestoredFromPreference -- Time elapsed: 1.050 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testUnpin -- Time elapsed: 1.076 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testUnpinAll -- Time elapsed: 1.061 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testMovePin -- Time elapsed: 1.157 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testNothingPinned -- Time elapsed: 1.082 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testPinDoesNotApplyToHidingField -- Time elapsed: 0.975 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testPinAppliesToSubtypes -- Time elapsed: 1.111 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testMovePinAtBoundaries -- Time elapsed: 0.980 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testMovePinSkipsPinsNotDisplayed -- Time elapsed: 1.208 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testConcurrentReadsAndWrites -- Time elapsed: 1.169 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testPinIsKeptInNewDebugSession -- Time elapsed: 2.460 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testTerminatedTarget -- Time elapsed: 0.905 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testFieldOfJdkClass -- Time elapsed: 1.127 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testFieldOfGenericClass -- Time elapsed: 1.287 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testPinnedStaticFieldIsNotShownWhenStaticsAreHidden -- Time elapsed: 1.852 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testPinnedStaticFieldWhenStaticsAreShown -- Time elapsed: 0.823 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testPrimitiveAndNullFields -- Time elapsed: 1.671 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testPinIsKeptAfterStep -- Time elapsed: 6.101 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testFieldOfInnerClass -- Time elapsed: 1.677 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testInvalidPreferenceValues -- Time elapsed: 1.997 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testArrayEntriesAreNotReordered -- Time elapsed: 2.169 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testMultipleSelection -- Time elapsed: 4.630 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testLocalVariableCannotBePinned -- Time elapsed: 2.979 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testMovePinOfStaticFieldsInStaticFrame -- Time elapsed: 2.887 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testNoErrorForOtherSelections -- Time elapsed: 3.581 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testPinInExpressionsView -- Time elapsed: 2.335 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testPinToTop -- Time elapsed: 2.361 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testUnpinAll -- Time elapsed: 2.376 s
+org.eclipse.jdt.debug.tests.PinnedFieldsSuite.testMovePin -- Time elapsed: 2.190 s
