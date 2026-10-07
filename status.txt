@@ -1,0 +1,3 @@
+MAVEN_EXIT=0
+SHA=2011417fda7337aeb8c4abff4ed4889d5e3670a4
+JOB=pinned-linux
