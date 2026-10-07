@@ -78,7 +78,7 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 	private IJavaObject fThis;
 	private String fViewId;
 	private final List<IStatus> fLoggedErrors = new CopyOnWriteArrayList<>();
-	private final ILogListener fLogListener = (status, _) -> {
+	private final ILogListener fLogListener = (status, plugin) -> {
 		if (status.matches(IStatus.ERROR)) {
 			fLoggedErrors.add(status);
 		}
