@@ -1,0 +1,43 @@
+!SESSION 2026-10-07 14:54:06.578 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=25.0.4.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en
+Framework arguments:  -application org.eclipse.tycho.surefire.osgibooter.uitest -testproperties /home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.debug.tests/target/surefire.properties -timeout 2400000
+Command-line arguments:  -data /home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.debug.tests/target/work/data -application org.eclipse.tycho.surefire.osgibooter.uitest -testproperties /home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.debug.tests/target/surefire.properties -consoleLog -timeout 2400000
+
+!ENTRY org.eclipse.e4.ui.css.swt.theme 2 0 2026-10-07 14:54:09.596
+!MESSAGE Theme 'org.eclipse.e4.ui.css.theme.e4_default' not found; falling back to default theme.
+
+!ENTRY org.eclipse.tycho.surefire.osgibooter 1 0 2026-10-07 14:54:11.497
+!MESSAGE starting DumpStackTracesTimer with timeout=2280000 at 2026-10-07 14:54:11 +0000
+
+!ENTRY org.eclipse.jdt.debug 1 0 2026-10-07 14:54:12.350
+!MESSAGE VM added temurin-25-jdk-amd64, location: /usr/lib/jvm/temurin-25-jdk-amd64
+
+!ENTRY org.eclipse.jdt.debug 4 125 2026-10-07 14:54:40.347
+!MESSAGE Internal error logged from JDI Debug: 
+!STACK 0
+com.sun.jdi.VMDisconnectedException: Got IOException from Virtual Machine
+	at org.eclipse.jdi.internal.connect.PacketSendManager.sendPacket(PacketSendManager.java:90)
+	at org.eclipse.jdi.internal.MirrorImpl.requestVM(MirrorImpl.java:202)
+	at org.eclipse.jdi.internal.MirrorImpl.requestVM(MirrorImpl.java:242)
+	at org.eclipse.jdi.internal.MirrorImpl.requestVM(MirrorImpl.java:274)
+	at org.eclipse.jdi.internal.ClassTypeImpl.superclass(ClassTypeImpl.java:306)
+	at org.eclipse.jdt.internal.debug.core.model.JDIClassType.getSuperclass(JDIClassType.java:145)
+	at org.eclipse.jdt.internal.debug.core.logicalstructures.JavaLogicalStructures.getLogicalStructureTypes(JavaLogicalStructures.java:291)
+	at org.eclipse.debug.internal.core.LogicalStructureProvider.getLogicalStructures(LogicalStructureProvider.java:59)
+	at org.eclipse.debug.internal.core.LogicalStructureManager.getLogicalStructureTypes(LogicalStructureManager.java:98)
+	at org.eclipse.debug.core.DebugPlugin.getLogicalStructureTypes(DebugPlugin.java:907)
+	at org.eclipse.debug.internal.ui.model.elements.VariableContentProvider.getLogicalValue(VariableContentProvider.java:206)
+	at org.eclipse.debug.internal.ui.model.elements.VariableContentProvider.getLogicalValue(VariableContentProvider.java:111)
+	at org.eclipse.debug.internal.ui.model.elements.VariableContentProvider.getValueChildren(VariableContentProvider.java:128)
+	at org.eclipse.debug.internal.ui.model.elements.VariableContentProvider.getAllChildren(VariableContentProvider.java:76)
+	at org.eclipse.jdt.internal.debug.ui.variables.JavaVariableContentProvider.getAllChildren(JavaVariableContentProvider.java:142)
+	at org.eclipse.jdt.internal.debug.ui.variables.JavaVariableContentProvider.getChildren(JavaVariableContentProvider.java:48)
+	at org.eclipse.debug.internal.ui.model.elements.ElementContentProvider.retrieveChildren(ElementContentProvider.java:99)
+	at org.eclipse.debug.internal.ui.model.elements.ElementContentProvider$1.run(ElementContentProvider.java:58)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-10-07 14:56:21.384
+!MESSAGE The workspace will exit with unsaved changes in this session.
