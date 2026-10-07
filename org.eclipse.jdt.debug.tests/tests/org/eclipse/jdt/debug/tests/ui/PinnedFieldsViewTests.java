@@ -35,8 +35,11 @@ import org.eclipse.debug.ui.IDebugView;
 import org.eclipse.jdt.debug.core.IJavaObject;
 import org.eclipse.jdt.debug.core.IJavaStackFrame;
 import org.eclipse.jdt.debug.core.IJavaThread;
+import org.eclipse.jdt.internal.debug.ui.IJDIPreferencesConstants;
+import org.eclipse.jdt.internal.debug.ui.JDIDebugUIPlugin;
 import org.eclipse.jdt.internal.debug.ui.variables.JavaContentProviderFilter;
 import org.eclipse.jdt.internal.debug.ui.variables.PinnedFieldsManager;
+import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.viewers.TreePath;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.viewers.TreeViewer;
@@ -75,7 +78,7 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 	private IJavaObject fThis;
 	private String fViewId;
 	private final List<IStatus> fLoggedErrors = new CopyOnWriteArrayList<>();
-	private final ILogListener fLogListener = (status, plugin) -> {
+	private final ILogListener fLogListener = (status, _) -> {
 		if (status.matches(IStatus.ERROR)) {
 			fLoggedErrors.add(status);
 		}
@@ -235,13 +238,7 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 
 	public void testLocalVariableCannotBePinned() throws Exception {
 		TreeViewer viewer = launchAndShowThis(IDebugUIConstants.ID_VARIABLE_VIEW);
-		waitFor("Missing local variable 'ivt'", () -> findRootItem(viewer, "ivt") != null);
-		sync(() -> {
-			viewer.setSelection(new TreeSelection(new TreePath(new Object[] { findRootItem(viewer, "ivt").getData() })), true);
-			return null;
-		});
-		waitFor("Local variable not selected", () -> viewer.getStructuredSelection().getFirstElement() instanceof IVariable variable
-				&& variable.getName().equals("ivt"));
+		selectRoot(viewer, "ivt");
 		withContextMenu(viewer, menu -> {
 			assertNull("'Pin to Top' should be hidden for a local variable", findItem(menu, PIN_TO_TOP));
 			assertNull("'Unpin All Fields' should be hidden for a local variable", findItem(menu, UNPIN_ALL));
@@ -261,6 +258,45 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 		processUiEvents(500);
 		// the handlers of the "Pin to Top" commands are evaluated against the stack frame selection: nothing must be logged
 		assertNoPinError();
+	}
+
+	public void testMovePinOfStaticFieldsInStaticFrame() throws Exception {
+		// in a static method, the static fields of the declaring type are root elements of the Variables view
+		IPreferenceStore store = JDIDebugUIPlugin.getDefault().getPreferenceStore();
+		String showStatics = IDebugUIConstants.ID_VARIABLE_VIEW + "." + IJDIPreferencesConstants.PREF_SHOW_STATIC_VARIABLES;
+		String showConstants = IDebugUIConstants.ID_VARIABLE_VIEW + "." + IJDIPreferencesConstants.PREF_SHOW_CONSTANTS;
+		boolean showedStatics = store.getBoolean(showStatics);
+		boolean showedConstants = store.getBoolean(showConstants);
+		store.setValue(showStatics, true);
+		store.setValue(showConstants, true);
+		try {
+			ILineBreakpoint bp = createLineBreakpoint(54, "PinnedFieldsTarget");
+			fThread = launchToLineBreakpoint("PinnedFieldsTarget", bp);
+			assertNotNull("Launch unsuccessful", fThread);
+			IViewPart part = openView(IDebugUIConstants.ID_VARIABLE_VIEW);
+			TreeViewer viewer = (TreeViewer) part.getAdapter(IDebugView.class).getViewer();
+			sync(() -> getActivePage().activate(part));
+			waitFor("Static fields not shown", () -> getRootNames(viewer).containsAll(List.of("staticCounter", "CONSTANT")),
+					() -> getRootNames(viewer));
+
+			pinRootFromContextMenu(viewer, "staticCounter");
+			pinRootFromContextMenu(viewer, "CONSTANT");
+			waitFor("Pinned static fields should be first", () -> startsWith(getRootNames(viewer), "staticCounter", "CONSTANT"),
+					() -> getRootNames(viewer));
+
+			selectRoot(viewer, "CONSTANT");
+			withContextMenu(viewer, menu -> {
+				MenuItem moveUp = findItem(menu, MOVE_PIN_UP);
+				assertNotNull("Missing 'Move Pin Up' in " + itemTexts(menu), moveUp);
+				assertTrue("'Move Pin Up' should be enabled for the last pinned root field", moveUp.isEnabled());
+				click(moveUp);
+			});
+			waitFor("Pinned static field should have moved up", () -> startsWith(getRootNames(viewer), "CONSTANT", "staticCounter"),
+					() -> getRootNames(viewer));
+		} finally {
+			store.setValue(showStatics, showedStatics);
+			store.setValue(showConstants, showedConstants);
+		}
 	}
 
 	public void testPinInExpressionsView() throws Exception {
@@ -299,6 +335,25 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 		sync(() -> getActivePage().activate(part));
 		waitFor("'this' not shown in " + viewId, () -> findRootItem(viewer) != null);
 		return viewer;
+	}
+
+	protected void pinRootFromContextMenu(TreeViewer viewer, String field) throws Exception {
+		selectRoot(viewer, field);
+		withContextMenu(viewer, menu -> {
+			MenuItem pin = findItem(menu, PIN_TO_TOP);
+			assertNotNull("Missing 'Pin to Top' in " + itemTexts(menu), pin);
+			click(pin);
+		});
+	}
+
+	protected void selectRoot(TreeViewer viewer, String name) throws Exception {
+		waitFor("Missing root element " + name, () -> findRootItem(viewer, name) != null);
+		sync(() -> {
+			viewer.setSelection(new TreeSelection(new TreePath(new Object[] { findRootItem(viewer, name).getData() })), true);
+			return null;
+		});
+		waitFor("Root element " + name + " not selected",
+				() -> viewer.getStructuredSelection().getFirstElement() instanceof IVariable variable && variable.getName().equals(name));
 	}
 
 	protected void pinFromContextMenu(TreeViewer viewer, String field) throws Exception {
@@ -414,11 +469,7 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 	}
 
 	protected void waitForFirstChildren(TreeViewer viewer, String... fields) throws Exception {
-		List<String> expected = List.of(fields);
-		waitFor("Expected first fields " + expected, () -> {
-			List<String> names = getChildNames(viewer);
-			return names.size() >= expected.size() && names.subList(0, expected.size()).equals(expected);
-		}, () -> getChildNames(viewer));
+		waitFor("Expected first fields " + List.of(fields), () -> startsWith(getChildNames(viewer), fields), () -> getChildNames(viewer));
 	}
 
 	protected Image getChildImage(TreeViewer viewer, String field) throws Exception {
@@ -470,6 +521,20 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 			}
 		}
 		return null;
+	}
+
+	protected static boolean startsWith(List<String> names, String... first) {
+		return names.size() >= first.length && names.subList(0, first.length).equals(List.of(first));
+	}
+
+	protected static List<String> getRootNames(TreeViewer viewer) throws DebugException {
+		List<String> names = new ArrayList<>();
+		for (TreeItem item : viewer.getTree().getItems()) {
+			if (item.getData() instanceof IVariable variable) {
+				names.add(variable.getName());
+			}
+		}
+		return names;
 	}
 
 	protected static List<String> getChildNames(TreeViewer viewer) throws DebugException {

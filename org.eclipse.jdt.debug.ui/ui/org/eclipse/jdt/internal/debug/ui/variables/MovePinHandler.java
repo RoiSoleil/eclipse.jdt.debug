@@ -21,12 +21,15 @@ import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IExecutableExtension;
 import org.eclipse.debug.core.DebugException;
 import org.eclipse.debug.core.model.IExpression;
+import org.eclipse.debug.core.model.IStackFrame;
 import org.eclipse.debug.core.model.IValue;
 import org.eclipse.debug.core.model.IVariable;
 import org.eclipse.debug.internal.ui.viewers.model.provisional.PresentationContext;
+import org.eclipse.debug.ui.IDebugView;
 import org.eclipse.jdt.debug.core.IJavaFieldVariable;
 import org.eclipse.jface.viewers.ITreeSelection;
 import org.eclipse.jface.viewers.TreePath;
+import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.ui.ISources;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.handlers.HandlerUtil;
@@ -86,7 +89,10 @@ public class MovePinHandler extends AbstractHandler implements IExecutableExtens
 				|| !(treeSelection.getFirstElement() instanceof IJavaFieldVariable field)) {
 			return null;
 		}
-		Object[] siblings = getChildren(treeSelection.getPaths()[0].getParentPath());
+		TreePath parentPath = treeSelection.getPaths()[0].getParentPath();
+		// a root element is a child of the input of the view, e.g. a static field of a static frame
+		Object parent = parentPath.getSegmentCount() == 0 ? getInput(part) : parentPath.getLastSegment();
+		Object[] siblings = getChildren(parent);
 		if (part != null) {
 			// only the children actually displayed in the view count
 			siblings = JavaContentProviderFilter.filterVariables(siblings, new PresentationContext(part.getSite().getId()));
@@ -94,8 +100,16 @@ public class MovePinHandler extends AbstractHandler implements IExecutableExtens
 		return new Target(field, siblings);
 	}
 
-	private static Object[] getChildren(TreePath path) throws DebugException {
-		Object parent = path.getSegmentCount() == 0 ? null : path.getLastSegment();
+	private static Object getInput(IWorkbenchPart part) {
+		IDebugView view = part == null ? null : part.getAdapter(IDebugView.class);
+		Viewer viewer = view == null ? null : view.getViewer();
+		return viewer == null ? null : viewer.getInput();
+	}
+
+	private static Object[] getChildren(Object parent) throws DebugException {
+		if (parent instanceof IStackFrame frame) {
+			return frame.getVariables();
+		}
 		IValue value = null;
 		if (parent instanceof IVariable variable) {
 			value = variable.getValue();
