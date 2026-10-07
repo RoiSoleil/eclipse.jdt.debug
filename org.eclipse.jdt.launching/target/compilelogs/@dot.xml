@@ -1,0 +1,1005 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 10/7/26, 3:35:24 PM UTC -->
+<!DOCTYPE compiler PUBLIC "-//Eclipse.org//DTD Eclipse JDT 3.2.006 Compiler//EN" "https://www.eclipse.org/jdt/core/compiler_32_006.dtd">
+<compiler copyright="Copyright IBM Corp 2000, 2020. All rights reserved." name="Eclipse Compiler for Java(TM)" version="v20261001-2030, 3.46.200">
+	<command_line>
+		<argument value="-properties"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/.settings/org.eclipse.jdt.core.prefs"/>
+		<argument value="-verbose"/>
+		<argument value="-enableJavadoc"/>
+		<argument value="-encoding"/>
+		<argument value="UTF-8"/>
+		<argument value="-proceedOnError"/>
+		<argument value="-log"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/compilelogs/@dot.xml"/>
+		<argument value="-s"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/generated-sources/annotations"/>
+		<argument value="-d"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes"/>
+		<argument value="-classpath"/>
+		<argument value="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.resources/3.24.200.v20261006-0849/org.eclipse.core.resources-3.24.200.v20261006-0849.jar[~org/eclipse/core/internal/dtree/*:~org/eclipse/core/internal/events/*:~org/eclipse/core/internal/localstore/*:~org/eclipse/core/internal/properties/*:~org/eclipse/core/internal/propertytester/*:~org/eclipse/core/internal/refresh/*:~org/eclipse/core/internal/resources/*:~org/eclipse/core/internal/resources/mapping/*:~org/eclipse/core/internal/resources/projectvariables/*:~org/eclipse/core/internal/resources/refresh/win32/*:~org/eclipse/core/internal/utils/*:~org/eclipse/core/internal/watson/*:+org/eclipse/core/resources/*:+org/eclipse/core/resources/filtermatchers/*:+org/eclipse/core/resources/mapping/*:+org/eclipse/core/resources/refresh/*:+org/eclipse/core/resources/team/*:+org/eclipse/core/resources/undo/snapshot/*:+org/eclipse/core/resources/variableresolvers/*:?**/*]:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.expressions/3.9.700.v20260710-0925/org.eclipse.core.expressions-3.9.700.v20260710-0925.jar[+org/eclipse/core/expressions/*:~org/eclipse/core/internal/expressions/*:~org/eclipse/core/internal/expressions/propertytester/*:~org/eclipse/core/internal/expressions/util/*:?**/*]:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.runtime/3.35.100.v20260910-1515/org.eclipse.core.runtime-3.35.100.v20260910-1515.jar[~org/eclipse/core/internal/preferences/legacy/*:~org/eclipse/core/internal/runtime/*:+org/eclipse/core/runtime/*:?**/*]:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.osgi/3.25.0.v20261001-1946/org.eclipse.osgi-3.25.0.v20261001-1946.jar[+com/sun/java/accessibility/util/*:+com/sun/jdi/*:+com/sun/jdi/connect/*:+com/sun/jdi/connect/spi/*:+com/sun/jdi/event/*:+com/sun/jdi/request/*:+com/sun/management/*:+com/sun/net/httpserver/*:+com/sun/net/httpserver/spi/*:+com/sun/nio/file/*:+com/sun/nio/sctp/*:+com/sun/security/auth/*:+com/sun/security/auth/callback/*:+com/sun/security/auth/login/*:+com/sun/security/auth/module/*:+com/sun/security/jgss/*:+com/sun/source/doctree/*:+com/sun/source/tree/*:+com/sun/source/util/*:+com/sun/tools/attach/*:+com/sun/tools/attach/spi/*:+com/sun/tools/javac/*:+com/sun/tools/jconsole/*:+java/applet/*:+java/awt/*:+java/awt/color/*:+java/awt/datatransfer/*:+java/awt/desktop/*:+java/awt/dnd/*:+java/awt/event/*:+java/awt/font/*:+java/awt/geom/*:+java/awt/im/*:+java/awt/im/spi/*:+java/awt/image/*:+java/awt/image/renderable/*:+java/awt/print/*:+java/beans/*:+java/beans/beancontext/*:+java/io/*:+java/lang/*:+java/lang/annotation/*:+java/lang/classfile/*:+java/lang/classfile/attribute/*:+java/lang/classfile/constantpool/*:+java/lang/classfile/instruction/*:+java/lang/constant/*:+java/lang/foreign/*:+java/lang/instrument/*:+java/lang/invoke/*:+java/lang/management/*:+java/lang/module/*:+java/lang/ref/*:+java/lang/reflect/*:+java/lang/runtime/*:+java/math/*:+java/net/*:+java/net/http/*:+java/net/spi/*:+java/nio/*:+java/nio/channels/*:+java/nio/channels/spi/*:+java/nio/charset/*:+java/nio/charset/spi/*:+java/nio/file/*:+java/nio/file/attribute/*:+java/nio/file/spi/*:+java/rmi/*:+java/rmi/dgc/*:+java/rmi/registry/*:+java/rmi/server/*:+java/security/*:+java/security/cert/*:+java/security/interfaces/*:+java/security/spec/*:+java/sql/*:+java/text/*:+java/text/spi/*:+java/time/*:+java/time/chrono/*:+java/time/format/*:+java/time/temporal/*:+java/time/zone/*:+java/util/*:+java/util/concurrent/*:+java/util/concurrent/atomic/*:+java/util/concurrent/locks/*:+java/util/function/*:+java/util/jar/*:+java/util/logging/*:+java/util/prefs/*:+java/util/random/*:+java/util/regex/*:+java/util/spi/*:+java/util/stream/*:+java/util/zip/*:+javax/accessibility/*:+javax/annotation/processing/*:+javax/crypto/*:+javax/crypto/interfaces/*:+javax/crypto/spec/*:+javax/imageio/*:+javax/imageio/event/*:+javax/imageio/metadata/*:+javax/imageio/plugins/bmp/*:+javax/imageio/plugins/jpeg/*:+javax/imageio/plugins/tiff/*:+javax/imageio/spi/*:+javax/imageio/stream/*:+javax/lang/model/*:+javax/lang/model/element/*:+javax/lang/model/type/*:+javax/lang/model/util/*:+javax/management/*:+javax/management/loading/*:+javax/management/modelmbean/*:+javax/management/monitor/*:+javax/management/openmbean/*:+javax/management/relation/*:+javax/management/remote/*:+javax/management/remote/rmi/*:+javax/management/timer/*:+javax/naming/*:+javax/naming/directory/*:+javax/naming/event/*:+javax/naming/ldap/*:+javax/naming/ldap/spi/*:+javax/naming/spi/*:+javax/net/*:+javax/net/ssl/*:+javax/print/*:+javax/print/attribute/*:+javax/print/attribute/standard/*:+javax/print/event/*:+javax/rmi/ssl/*:+javax/script/*:+javax/security/auth/*:+javax/security/auth/callback/*:+javax/security/auth/kerberos/*:+javax/security/auth/login/*:+javax/security/auth/spi/*:+javax/security/auth/x500/*:+javax/security/cert/*:+javax/security/sasl/*:+javax/smartcardio/*:+javax/sound/*:+javax/sound/midi/*:+javax/sound/midi/spi/*:+javax/sound/sampled/*:+javax/sound/sampled/spi/*:+javax/sql/*:+javax/sql/rowset/*:+javax/sql/rowset/serial/*:+javax/sql/rowset/spi/*:+javax/swing/*:+javax/swing/border/*:+javax/swing/colorchooser/*:+javax/swing/event/*:+javax/swing/filechooser/*:+javax/swing/plaf/*:+javax/swing/plaf/basic/*:+javax/swing/plaf/metal/*:+javax/swing/plaf/multi/*:+javax/swing/plaf/nimbus/*:+javax/swing/plaf/synth/*:+javax/swing/table/*:+javax/swing/text/*:+javax/swing/text/html/*:+javax/swing/text/html/parser/*:+javax/swing/text/rtf/*:+javax/swing/tree/*:+javax/swing/undo/*:+javax/tools/*:+javax/transaction/xa/*:+javax/xml/*:+javax/xml/catalog/*:+javax/xml/crypto/*:+javax/xml/crypto/dom/*:+javax/xml/crypto/dsig/*:+javax/xml/crypto/dsig/dom/*:+javax/xml/crypto/dsig/keyinfo/*:+javax/xml/crypto/dsig/spec/*:+javax/xml/datatype/*:+javax/xml/namespace/*:+javax/xml/parsers/*:+javax/xml/stream/*:+javax/xml/stream/events/*:+javax/xml/stream/util/*:+javax/xml/transform/*:+javax/xml/transform/dom/*:+javax/xml/transform/sax/*:+javax/xml/transform/stax/*:+javax/xml/transform/stream/*:+javax/xml/validation/*:+javax/xml/xpath/*:+jdk/dynalink/*:+jdk/dynalink/beans/*:+jdk/dynalink/linker/*:+jdk/dynalink/linker/support/*:+jdk/dynalink/support/*:+jdk/javadoc/doclet/*:+jdk/jfr/*:+jdk/jfr/consumer/*:+jdk/jshell/*:+jdk/jshell/execution/*:+jdk/jshell/spi/*:+jdk/jshell/tool/*:+jdk/management/*:+jdk/management/jfr/*:+jdk/net/*:+jdk/nio/*:+jdk/nio/mapmode/*:+jdk/security/jarsigner/*:+jdk/swing/interop/*:+netscape/javascript/*:~org/eclipse/core/runtime/adaptor/*:~org/eclipse/core/runtime/internal/adaptor/*:+org/eclipse/equinox/log/*:+org/eclipse/osgi/container/*:+org/eclipse/osgi/container/builders/*:+org/eclipse/osgi/container/namespaces/*:+org/eclipse/osgi/framework/console/*:+org/eclipse/osgi/framework/eventmgr/*:~org/eclipse/osgi/framework/internal/reliablefile/*:+org/eclipse/osgi/framework/log/*:~org/eclipse/osgi/framework/util/*:~org/eclipse/osgi/internal/debug/*:~org/eclipse/osgi/internal/framework/*:~org/eclipse/osgi/internal/hookregistry/*:~org/eclipse/osgi/internal/loader/*:~org/eclipse/osgi/internal/loader/buddy/*:~org/eclipse/osgi/internal/loader/classpath/*:~org/eclipse/osgi/internal/loader/sources/*:~org/eclipse/osgi/internal/location/*:~org/eclipse/osgi/internal/messages/*:~org/eclipse/osgi/internal/provisional/service/security/*:~org/eclipse/osgi/internal/provisional/verifier/*:~org/eclipse/osgi/internal/service/security/*:~org/eclipse/osgi/internal/serviceregistry/*:~org/eclipse/osgi/internal/signedcontent/*:~org/eclipse/osgi/internal/url/*:+org/eclipse/osgi/launch/*:+org/eclipse/osgi/report/resolution/*:+org/eclipse/osgi/service/datalocation/*:+org/eclipse/osgi/service/debug/*:+org/eclipse/osgi/service/environment/*:+org/eclipse/osgi/service/localization/*:+org/eclipse/osgi/service/pluginconversion/*:+org/eclipse/osgi/service/resolver/*:+org/eclipse/osgi/service/runnable/*:+org/eclipse/osgi/service/security/*:+org/eclipse/osgi/service/urlconversion/*:+org/eclipse/osgi/signedcontent/*:~org/eclipse/osgi/storage/*:~org/eclipse/osgi/storage/bundlefile/*:~org/eclipse/osgi/storage/url/reference/*:+org/eclipse/osgi/storagemanager/*:+org/eclipse/osgi/util/*:+org/ietf/jgss/*:+org/osgi/dto/*:+org/osgi/framework/*:+org/osgi/framework/connect/*:+org/osgi/framework/dto/*:+org/osgi/framework/hooks/bundle/*:+org/osgi/framework/hooks/resolver/*:+org/osgi/framework/hooks/service/*:+org/osgi/framework/hooks/weaving/*:+org/osgi/framework/launch/*:+org/osgi/framework/namespace/*:+org/osgi/framework/startlevel/*:+org/osgi/framework/startlevel/dto/*:+org/osgi/framework/wiring/*:+org/osgi/framework/wiring/dto/*:+org/osgi/resource/*:+org/osgi/resource/dto/*:+org/osgi/service/condition/*:+org/osgi/service/condpermadmin/*:+org/osgi/service/log/*:+org/osgi/service/log/admin/*:+org/osgi/service/packageadmin/*:+org/osgi/service/permissionadmin/*:+org/osgi/service/resolver/*:+org/osgi/service/startlevel/*:+org/osgi/service/url/*:+org/osgi/util/tracker/*:+org/w3c/dom/*:+org/w3c/dom/bootstrap/*:+org/w3c/dom/css/*:+org/w3c/dom/events/*:+org/w3c/dom/html/*:+org/w3c/dom/ls/*:+org/w3c/dom/ranges/*:+org/w3c/dom/stylesheets/*:+org/w3c/dom/traversal/*:+org/w3c/dom/views/*:+org/w3c/dom/xpath/*:+org/xml/sax/*:+org/xml/sax/ext/*:+org/xml/sax/helpers/*:+sun/misc/*:+sun/reflect/*:?**/*]:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.common/3.21.100.v20260829-1451/org.eclipse.equinox.common-3.21.100.v20260829-1451.jar[~org/eclipse/core/internal/boot/*:~org/eclipse/core/internal/runtime/*:+org/eclipse/core/runtime/*:+org/eclipse/core/text/*:+org/eclipse/equinox/events/*:?**/*]:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.jobs/3.15.900.v20260604-0622/org.eclipse.core.jobs-3.15.900.v20260604-0622.jar[~org/eclipse/core/internal/jobs/*:+org/eclipse/core/runtime/jobs/*:?**/*]:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.registry/3.12.700.v20260830-1519/org.eclipse.equinox.registry-3.12.700.v20260830-1519.jar[~org/eclipse/core/internal/adapter/*:~org/eclipse/core/internal/registry/*:~org/eclipse/core/internal/registry/osgi/*:~org/eclipse/core/internal/registry/spi/*:+org/eclipse/core/runtime/*:+org/eclipse/core/runtime/dynamichelpers/*:+org/eclipse/core/runtime/spi/*:?**/*]:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.preferences/3.12.100.v20251111-0704/org.eclipse.equinox.preferences-3.12.100.v20251111-0704.jar[~org/eclipse/core/internal/preferences/*:~org/eclipse/core/internal/preferences/exchange/*:+org/eclipse/core/runtime/preferences/*:?**/*]:/home/runner/.m2/repository/org/osgi/org.osgi.service.prefs/1.1.2/org.osgi.service.prefs-1.1.2.jar[+org/osgi/service/prefs/*:?**/*]:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.contenttype/3.9.1000.v20260921-1824/org.eclipse.core.contenttype-3.9.1000.v20260921-1824.jar[~org/eclipse/core/internal/content/*:+org/eclipse/core/runtime/content/*:?**/*]:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.app/1.7.600.v20251211-1038/org.eclipse.equinox.app-1.7.600.v20251211-1038.jar[+org/eclipse/equinox/app/*:~org/eclipse/equinox/internal/app/*:+org/osgi/service/application/*:?**/*]:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.filesystem/1.12.0.v20260927-0940/org.eclipse.core.filesystem-1.12.0.v20260927-0940.jar[?**/*]:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.jdt.core/3.48.0.v20260930-1106/org.eclipse.jdt.core-3.48.0.v20260930-1106.jar[+org/eclipse/jdt/core/*:+org/eclipse/jdt/core/compiler/*:+org/eclipse/jdt/core/dom/*:+org/eclipse/jdt/core/dom/rewrite/*:+org/eclipse/jdt/core/eval/*:+org/eclipse/jdt/core/formatter/*:+org/eclipse/jdt/core/index/*:+org/eclipse/jdt/core/jdom/*:+org/eclipse/jdt/core/provisional/*:+org/eclipse/jdt/core/search/*:+org/eclipse/jdt/core/util/*:~org/eclipse/jdt/internal/codeassist/*:~org/eclipse/jdt/internal/codeassist/complete/*:~org/eclipse/jdt/internal/codeassist/impl/*:~org/eclipse/jdt/internal/codeassist/select/*:~org/eclipse/jdt/internal/compiler/*:~org/eclipse/jdt/internal/compiler/parser/*:+org/eclipse/jdt/internal/core/*:~org/eclipse/jdt/internal/core/builder/*:~org/eclipse/jdt/internal/core/dom/*:~org/eclipse/jdt/internal/core/dom/rewrite/*:~org/eclipse/jdt/internal/core/dom/util/*:~org/eclipse/jdt/internal/core/eval/*:~org/eclipse/jdt/internal/core/hierarchy/*:~org/eclipse/jdt/internal/core/index/*:~org/eclipse/jdt/internal/core/jdom/*:~org/eclipse/jdt/internal/core/nd/java/model/*:~org/eclipse/jdt/internal/core/search/*:~org/eclipse/jdt/internal/core/search/indexing/*:~org/eclipse/jdt/internal/core/search/matching/*:~org/eclipse/jdt/internal/core/search/processing/*:~org/eclipse/jdt/internal/core/util/*:~org/eclipse/jdt/internal/eval/*:~org/eclipse/jdt/internal/formatter/*:~org/eclipse/jdt/internal/formatter/linewrap/*:~org/eclipse/jdt/internal/formatter/old/*:?**/*]:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.text/3.14.800.v20260815-0849/org.eclipse.text-3.14.800.v20260815-0849.jar[?**/*]:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.commands/3.13.100.v20260902-1129/org.eclipse.core.commands-3.13.100.v20260902-1129.jar[?**/*]:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.jdt.core.compiler.batch/3.46.200.v20261005-2103/org.eclipse.jdt.core.compiler.batch-3.46.200.v20261005-2103.jar[+META-INF/services/*:+org/eclipse/jdt/core/compiler/*:+org/eclipse/jdt/core/compiler/batch/*:~org/eclipse/jdt/internal/antadapter/*:~org/eclipse/jdt/internal/compiler/*:~org/eclipse/jdt/internal/compiler/apt/dispatch/*:~org/eclipse/jdt/internal/compiler/apt/model/*:~org/eclipse/jdt/internal/compiler/apt/util/*:~org/eclipse/jdt/internal/compiler/ast/*:~org/eclipse/jdt/internal/compiler/batch/*:~org/eclipse/jdt/internal/compiler/classfmt/*:~org/eclipse/jdt/internal/compiler/codegen/*:~org/eclipse/jdt/internal/compiler/env/*:~org/eclipse/jdt/internal/compiler/flow/*:~org/eclipse/jdt/internal/compiler/impl/*:~org/eclipse/jdt/internal/compiler/lookup/*:~org/eclipse/jdt/internal/compiler/parser/*:~org/eclipse/jdt/internal/compiler/parser/diagnose/*:~org/eclipse/jdt/internal/compiler/problem/*:~org/eclipse/jdt/internal/compiler/tool/*:~org/eclipse/jdt/internal/compiler/util/*:?**/*]:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.debug.core/3.24.100.v20260924-2125/org.eclipse.debug.core-3.24.100.v20260924-2125.jar[+org/eclipse/debug/core/*:+org/eclipse/debug/core/commands/*:+org/eclipse/debug/core/model/*:+org/eclipse/debug/core/sourcelookup/*:+org/eclipse/debug/core/sourcelookup/containers/*:+org/eclipse/debug/internal/core/*:~org/eclipse/debug/internal/core/commands/*:~org/eclipse/debug/internal/core/groups/*:~org/eclipse/debug/internal/core/groups/observer/*:~org/eclipse/debug/internal/core/sourcelookup/*:~org/eclipse/debug/internal/core/sourcelookup/containers/*:~org/eclipse/debug/internal/core/variables/*:?**/*]:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.variables/3.6.900.v20260602-0702/org.eclipse.core.variables-3.6.900.v20260602-0702.jar[~org/eclipse/core/internal/variables/*:+org/eclipse/core/variables/*:?**/*]:/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.debug/target/classes[+org/eclipse/jdi/*:+org/eclipse/jdi/hcr/*:~org/eclipse/jdi/internal/*:~org/eclipse/jdi/internal/connect/*:~org/eclipse/jdi/internal/event/*:~org/eclipse/jdi/internal/jdwp/*:~org/eclipse/jdi/internal/request/*:~org/eclipse/jdi/internal/spy/*:+org/eclipse/jdt/debug/core/*:+org/eclipse/jdt/debug/eval/*:+org/eclipse/jdt/internal/debug/core/*:~org/eclipse/jdt/internal/debug/core/breakpoints/*:~org/eclipse/jdt/internal/debug/core/hcr/*:~org/eclipse/jdt/internal/debug/core/logicalstructures/*:~org/eclipse/jdt/internal/debug/core/model/*:~org/eclipse/jdt/internal/debug/eval/*:~org/eclipse/jdt/internal/debug/eval/ast/engine/*:~org/eclipse/jdt/internal/debug/eval/ast/instructions/*:?**/*]:/home/runner/.m2/repository/p2/osgi/bundle/com.sun.jna/5.19.1.v20260612-1000/com.sun.jna-5.19.1.v20260612-1000.jar[?**/*]:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.resources.spysupport/1.6.0.v20250608-0440/org.eclipse.core.resources.spysupport-1.6.0.v20250608-0440.jar:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.spi/1.0.0.v20261004-1119/org.eclipse.equinox.spi-1.0.0.v20261004-1119.jar:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.region/1.5.800.v20250711-0559/org.eclipse.equinox.region-1.5.800.v20250711-0559.jar:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.transforms.hook/1.4.400.v20250606-0538/org.eclipse.equinox.transforms.hook-1.4.400.v20250606-0538.jar:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.filesystem.linux.ppc64le/1.4.200.v20220812-1420/org.eclipse.core.filesystem.linux.ppc64le-1.4.200.v20220812-1420.jar:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.filesystem.linux.aarch64/1.4.200.v20220812-1420/org.eclipse.core.filesystem.linux.aarch64-1.4.200.v20220812-1420.jar:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.filesystem.linux.x86_64/1.2.500.v20260707-0813/org.eclipse.core.filesystem.linux.x86_64-1.2.500.v20260707-0813.jar:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.filesystem.macosx/1.3.400.v20220812-1420/org.eclipse.core.filesystem.macosx-1.3.400.v20220812-1420.jar:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.osgi.compatibility.state/1.3.100.v20260909-1123/org.eclipse.osgi.compatibility.state-1.3.100.v20260909-1123.jar:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.weaving.hook/1.4.500.v20260821-1846/org.eclipse.equinox.weaving.hook-1.4.500.v20260821-1846.jar:/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.jdt.core.tests.builder.mockcompiler/1.0.200.v20250210-0737/org.eclipse.jdt.core.tests.builder.mockcompiler-1.0.200.v20250210-0737.jar:/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes:/home/runner/.m2/repository/org/osgi/org.osgi.service.event/1.4.1/org.osgi.service.event-1.4.1.jar[+org/osgi/service/event/annotations/*:?**/*]:/home/runner/.m2/repository/org/osgi/org.osgi.service.metatype.annotations/1.4.1/org.osgi.service.metatype.annotations-1.4.1.jar[+org/osgi/service/metatype/annotations/*:?**/*]:/home/runner/.m2/repository/org/osgi/org.osgi.annotation.versioning/1.1.2/org.osgi.annotation.versioning-1.1.2.jar[+org/osgi/annotation/versioning/*:?**/*]:/home/runner/.m2/repository/org/osgi/org.osgi.annotation.bundle/1.1.1/org.osgi.annotation.bundle-1.1.1.jar[+org/osgi/annotation/bundle/*:?**/*]:/home/runner/.m2/repository/org/osgi/org.osgi.service.cm/1.6.1/org.osgi.service.cm-1.6.1.jar[+org/osgi/service/cm/annotations/*:?**/*]:/home/runner/.m2/repository/org/eclipse/pde/org.eclipse.pde.api.tools.annotations/1.4.100/org.eclipse.pde.api.tools.annotations-1.4.100.jar[+org/eclipse/pde/api/tools/annotations/*:?**/*]:/home/runner/.m2/repository/org/osgi/org.osgi.service.component.annotations/1.5.1/org.osgi.service.component.annotations-1.5.1.jar[+org/osgi/service/component/annotations/*:?**/*]"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/AbstractRuntimeClasspathEntry.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/ClasspathContainerSourceContainerTypeDelegate.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/ClasspathShortener.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/ClasspathVariableSourceContainerTypeDelegate.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/CommandLineQuoting.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/CommandLineShortener.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/CompositeId.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/DefaultEntryResolver.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/DefaultProjectClasspathEntry.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/DetectVMInstallationsJob.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/EECompilationParticipant.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/EEVMInstall.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/EEVMType.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/IProcessTempFileCreator.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JREContainer.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JREContainerInitializer.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JREPreferenceModifyListener.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JRERuntimeClasspathEntryResolver.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JavaAppletLaunchConfigurationDelegate.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JavaClasspathVariablesInitializer.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JavaFxLibraryResolver.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JavaLaunchableTester.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JavaLaunchingUtils.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JavaMigrationDelegate.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JavaProjectSourceContainerTypeDelegate.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JavaRemoteApplicationLaunchConfigurationDelegate.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JavaSourceLookupDirector.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JavaSourceLookupUtil.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/LaunchingMessages.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/LaunchingPlugin.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/LaunchingPreferenceInitializer.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/LibraryInfo.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/MacInstalledJREs.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/PListParser.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/PackageFragmentRootSourceContainerTypeDelegate.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/ProjectClasspathVariableResolver.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/RuntimeClasspathEntry.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/RuntimeClasspathEntryListComparator.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/RuntimeClasspathEntryResolver.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/RuntimeClasspathProvider.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/SocketAttachConnector.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/SocketListenConnector.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/SocketListenConnectorProcess.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/StandardVM.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/StandardVMDebugger.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/StandardVMRunner.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/StandardVMType.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/VMDefinitionsContainer.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/VMListener.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/VariableClasspathEntry.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/VariableClasspathResolver.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/environments/AccessRuleParticipant.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/environments/Analyzer.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/environments/DefaultAccessRuleParticipant.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/environments/EnvironmentMessages.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/environments/EnvironmentsManager.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/environments/ExecutionEnvironment.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/environments/ExecutionEnvironmentAnalyzer.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/environments/ExecutionEnvironmentVariableResolver.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/macosx/MacOSXDebugVMRunner.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/macosx/MacOSXVMInstall.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/macosx/MacOSXVMInstallType.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/macosx/MacOSXVMRunner.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/macosx/Messages.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/AdvancedRemoteJavaLaunchDelegate.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/AdvancedSourceLookupDirector.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/AdvancedSourceLookupSupport.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/BackgroundProcessingJob.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/CompositeSourceContainer.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/DefaultProjectDescriber.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/FileHashing.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/IJDIHelpers.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/IRunnableWithProgress.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/JDIHelpers.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/JDIStratumPropertyTester.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/JavaagentVariableResolver.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/Messages.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/WorkspaceProjectSourceContainers.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/AbstractJavaLaunchConfigurationDelegate.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/AbstractVMInstall.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/AbstractVMInstallType.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/AbstractVMRunner.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/ExecutionArguments.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IJavaLaunchConfigurationConstants.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/ILibraryLocationResolver.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IRuntimeClasspathEntry.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IRuntimeClasspathEntry2.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IRuntimeClasspathEntryResolver.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IRuntimeClasspathEntryResolver2.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IRuntimeClasspathProvider.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IRuntimeContainerComparator.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IVMConnector.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IVMInstall.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IVMInstall2.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IVMInstall3.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IVMInstallChangedListener.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IVMInstallType.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IVMRunner.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/JavaLaunchDelegate.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/JavaRuntime.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/LibraryLocation.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/PropertyChangeEvent.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/SocketUtil.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/StandardClasspathProvider.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/StandardSourcePathProvider.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/VMRunnerConfiguration.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/VMStandin.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/environments/CompatibleEnvironment.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/environments/ExecutionEnvironmentDescription.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/environments/IAccessRuleParticipant.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/environments/IExecutionEnvironment.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/environments/IExecutionEnvironmentAnalyzerDelegate.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/environments/IExecutionEnvironmentsManager.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/ArchiveSourceLocation.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/DirectorySourceLocation.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/IJavaSourceLocation.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/JavaProjectSourceLocation.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/JavaSourceLocator.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/LocalFileStorage.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/PackageFragmentRootSourceLocation.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/ZipEntryStorage.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/advanced/AdvancedJavaLaunchDelegate.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/advanced/AdvancedSourceLookup.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/advanced/AdvancedSourceLookupParticipant.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/advanced/ISourceContainerResolver.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/advanced/IWorkspaceProjectDescriber.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/containers/ClasspathContainerSourceContainer.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/containers/ClasspathVariableSourceContainer.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/containers/JavaProjectSourceContainer.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/containers/JavaSourceLookupParticipant.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/containers/JavaSourcePathComputer.java"/>
+		<argument value="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/containers/PackageFragmentRootSourceContainer.java"/>
+		<argument value="-g"/>
+		<argument value="-target"/>
+		<argument value="25"/>
+		<argument value="-source"/>
+		<argument value="25"/>
+		<argument value="--release"/>
+		<argument value="25"/>
+		<argument value="-encoding"/>
+		<argument value="UTF-8"/>
+	</command_line>
+	<options>
+		<option key="org.eclipse.jdt.core.compiler.annotation.inheritNullAnnotations" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.annotation.missingNonNullByDefaultAnnotation" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.annotation.nonnull" value="org.eclipse.jdt.annotation.NonNull"/>
+		<option key="org.eclipse.jdt.core.compiler.annotation.nonnull.secondary" value=""/>
+		<option key="org.eclipse.jdt.core.compiler.annotation.nonnullbydefault" value="org.eclipse.jdt.annotation.NonNullByDefault"/>
+		<option key="org.eclipse.jdt.core.compiler.annotation.nonnullbydefault.secondary" value=""/>
+		<option key="org.eclipse.jdt.core.compiler.annotation.nonnullisdefault" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.annotation.notowning" value="org.eclipse.jdt.annotation.NotOwning"/>
+		<option key="org.eclipse.jdt.core.compiler.annotation.nullable" value="org.eclipse.jdt.annotation.Nullable"/>
+		<option key="org.eclipse.jdt.core.compiler.annotation.nullable.secondary" value=""/>
+		<option key="org.eclipse.jdt.core.compiler.annotation.nullanalysis" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.annotation.owning" value="org.eclipse.jdt.annotation.Owning"/>
+		<option key="org.eclipse.jdt.core.compiler.annotation.resourceanalysis" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode" value="enabled"/>
+		<option key="org.eclipse.jdt.core.compiler.codegen.lambda.genericSignature" value="do not generate"/>
+		<option key="org.eclipse.jdt.core.compiler.codegen.methodParameters" value="do not generate"/>
+		<option key="org.eclipse.jdt.core.compiler.codegen.shareCommonFinallyBlocks" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.codegen.targetPlatform" value="25"/>
+		<option key="org.eclipse.jdt.core.compiler.codegen.unusedLocal" value="preserve"/>
+		<option key="org.eclipse.jdt.core.compiler.codegen.useStringConcatFactory" value="enabled"/>
+		<option key="org.eclipse.jdt.core.compiler.codegen.validateOperandStack" value="enabled"/>
+		<option key="org.eclipse.jdt.core.compiler.compliance" value="25"/>
+		<option key="org.eclipse.jdt.core.compiler.debug.lineNumber" value="generate"/>
+		<option key="org.eclipse.jdt.core.compiler.debug.localVariable" value="generate"/>
+		<option key="org.eclipse.jdt.core.compiler.debug.sourceFile" value="generate"/>
+		<option key="org.eclipse.jdt.core.compiler.doc.comment.support" value="enabled"/>
+		<option key="org.eclipse.jdt.core.compiler.emulateJavacBug8031744" value="enabled"/>
+		<option key="org.eclipse.jdt.core.compiler.generateClassFiles" value="enabled"/>
+		<option key="org.eclipse.jdt.core.compiler.ignoreUnnamedModuleForSplitPackage" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.maxProblemPerUnit" value="100"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.APILeak" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.annotatedTypeArgumentToUnannotated" value="info"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.annotationSuperInterface" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.assertIdentifier" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.autoboxing" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.comparingIdentical" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.deadCode" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.deadCodeInTrivialIfStatement" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.deprecation" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.deprecationInDeprecatedCode" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.deprecationWhenOverridingDeprecatedMethod" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.discouragedReference" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.emptyStatement" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.enablePreviewFeatures" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.enumIdentifier" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.explicitlyClosedAutoCloseable" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.fallthroughCase" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.fatalOptionalError" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.fieldHiding" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.finalParameterBound" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.finallyBlockNotCompletingNormally" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.forbiddenReference" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.hiddenCatchBlock" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.includeNullInfoFromAsserts" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.incompatibleNonInheritedInterfaceMethod" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.incompatibleOwningContract" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.incompleteEnumSwitch" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.indirectStaticAccess" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.insufficientResourceAnalysis" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.invalidJavadoc" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.invalidJavadocTags" value="enabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.invalidJavadocTagsDeprecatedRef" value="enabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.invalidJavadocTagsNotVisibleRef" value="enabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.invalidJavadocTagsVisibility" value="protected"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.localVariableHiding" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.memberOfDeprecatedTypeNotDeprecated" value="info"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.methodWithConstructorName" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.missingDefaultCase" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.missingDeprecatedAnnotation" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.missingEnumCaseDespiteDefault" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.missingHashCodeMethod" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.missingJavadocComments" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.missingJavadocCommentsOverriding" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.missingJavadocCommentsVisibility" value="public"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.missingJavadocTagDescription" value="all_standard_tags"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.missingJavadocTags" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.missingJavadocTagsMethodTypeParameters" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.missingJavadocTagsOverriding" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.missingJavadocTagsVisibility" value="protected"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.missingOverrideAnnotation" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.missingOverrideAnnotationForInterfaceMethodImplementation" value="enabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.missingSerialVersion" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.missingSynchronizedOnInheritedMethod" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.noEffectAssignment" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.noImplicitStringConversion" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.nonExternalizedStringLiteral" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.nonnullParameterAnnotationDropped" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.nonnullTypeVariableFromLegacyInvocation" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.nullAnnotationInferenceConflict" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.nullReference" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.nullSpecInsufficientInfo" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.nullSpecViolation" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.nullUncheckedConversion" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.overridingMethodWithoutSuperInvocation" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.overridingPackageDefaultMethod" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.parameterAssignment" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.pessimisticNullAnalysisForFreeTypeVariables" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.possibleAccidentalBooleanAssignment" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.potentialNullReference" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.potentialNullSpecViolation" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.potentiallyUnclosedCloseable" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.rawTypeReference" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.redundantNullAnnotation" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.redundantNullCheck" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.redundantSpecificationOfTypeArguments" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.redundantSuperinterface" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.reportMethodCanBePotentiallyStatic" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.reportMethodCanBeStatic" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.reportPreviewFeatures" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.specialParameterHidingField" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.staticAccessReceiver" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.suppressOptionalErrors" value="enabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.suppressWarnings" value="enabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.suppressWarningsNotFullyAnalysed" value="info"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.syntacticNullAnalysisForFields" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.syntheticAccessEmulation" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.tasks" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.terminalDeprecation" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.typeParameterHiding" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unavoidableGenericTypeProblems" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.uncheckedTypeOperation" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unclosedCloseable" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.undocumentedEmptyBlock" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unhandledWarningToken" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.uninternedIdentityComparison" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unlikelyCollectionMethodArgumentType" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unlikelyCollectionMethodArgumentTypeStrict" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unlikelyEqualsArgumentType" value="info"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unnecessaryElse" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unnecessaryTypeCheck" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unqualifiedFieldAccess" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unsafeTypeOperation" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unstableAutoModuleName" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unusedDeclaredThrownException" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unusedDeclaredThrownExceptionExemptExceptionAndThrowable" value="enabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unusedDeclaredThrownExceptionIncludeDocCommentReference" value="enabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unusedDeclaredThrownExceptionWhenOverriding" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unusedExceptionParameter" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unusedImport" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unusedLabel" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unusedLambdaParameter" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unusedLocal" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unusedObjectAllocation" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unusedParameter" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unusedParameterIncludeDocCommentReference" value="enabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unusedParameterWhenImplementingAbstract" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unusedParameterWhenOverridingConcrete" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unusedPrivateMember" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unusedTypeArgumentsForMethodInvocation" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unusedTypeParameter" value="ignore"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.unusedWarningToken" value="error"/>
+		<option key="org.eclipse.jdt.core.compiler.problem.varargsArgumentNeedCast" value="warning"/>
+		<option key="org.eclipse.jdt.core.compiler.processAnnotations" value="enabled"/>
+		<option key="org.eclipse.jdt.core.compiler.release" value="enabled"/>
+		<option key="org.eclipse.jdt.core.compiler.source" value="25"/>
+		<option key="org.eclipse.jdt.core.compiler.storeAnnotations" value="disabled"/>
+		<option key="org.eclipse.jdt.core.compiler.taskCaseSensitive" value="enabled"/>
+		<option key="org.eclipse.jdt.core.compiler.taskPriorities" value="NORMAL,HIGH,NORMAL,HIGH,HIGH"/>
+		<option key="org.eclipse.jdt.core.compiler.taskTags" value="TODO,FIXME,XXX,EXPERIMENTAL,CONTEXTLAUNCHING"/>
+		<option key="org.eclipse.jdt.core.encoding" value="UTF-8"/>
+	</options>
+	<classpaths>
+		<classpath id="FOLDER" path="/usr/lib/jvm/temurin-25-jdk-amd64"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.resources/3.24.200.v20261006-0849/org.eclipse.core.resources-3.24.200.v20261006-0849.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.expressions/3.9.700.v20260710-0925/org.eclipse.core.expressions-3.9.700.v20260710-0925.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.runtime/3.35.100.v20260910-1515/org.eclipse.core.runtime-3.35.100.v20260910-1515.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.osgi/3.25.0.v20261001-1946/org.eclipse.osgi-3.25.0.v20261001-1946.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.common/3.21.100.v20260829-1451/org.eclipse.equinox.common-3.21.100.v20260829-1451.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.jobs/3.15.900.v20260604-0622/org.eclipse.core.jobs-3.15.900.v20260604-0622.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.registry/3.12.700.v20260830-1519/org.eclipse.equinox.registry-3.12.700.v20260830-1519.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.preferences/3.12.100.v20251111-0704/org.eclipse.equinox.preferences-3.12.100.v20251111-0704.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/org/osgi/org.osgi.service.prefs/1.1.2/org.osgi.service.prefs-1.1.2.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.contenttype/3.9.1000.v20260921-1824/org.eclipse.core.contenttype-3.9.1000.v20260921-1824.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.app/1.7.600.v20251211-1038/org.eclipse.equinox.app-1.7.600.v20251211-1038.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.filesystem/1.12.0.v20260927-0940/org.eclipse.core.filesystem-1.12.0.v20260927-0940.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.jdt.core/3.48.0.v20260930-1106/org.eclipse.jdt.core-3.48.0.v20260930-1106.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.text/3.14.800.v20260815-0849/org.eclipse.text-3.14.800.v20260815-0849.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.commands/3.13.100.v20260902-1129/org.eclipse.core.commands-3.13.100.v20260902-1129.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.jdt.core.compiler.batch/3.46.200.v20261005-2103/org.eclipse.jdt.core.compiler.batch-3.46.200.v20261005-2103.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.debug.core/3.24.100.v20260924-2125/org.eclipse.debug.core-3.24.100.v20260924-2125.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.variables/3.6.900.v20260602-0702/org.eclipse.core.variables-3.6.900.v20260602-0702.jar"/>
+		<classpath id="FOLDER" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.debug/target/classes/"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/com.sun.jna/5.19.1.v20260612-1000/com.sun.jna-5.19.1.v20260612-1000.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.resources.spysupport/1.6.0.v20250608-0440/org.eclipse.core.resources.spysupport-1.6.0.v20250608-0440.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.spi/1.0.0.v20261004-1119/org.eclipse.equinox.spi-1.0.0.v20261004-1119.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.region/1.5.800.v20250711-0559/org.eclipse.equinox.region-1.5.800.v20250711-0559.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.transforms.hook/1.4.400.v20250606-0538/org.eclipse.equinox.transforms.hook-1.4.400.v20250606-0538.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.filesystem.linux.ppc64le/1.4.200.v20220812-1420/org.eclipse.core.filesystem.linux.ppc64le-1.4.200.v20220812-1420.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.filesystem.linux.aarch64/1.4.200.v20220812-1420/org.eclipse.core.filesystem.linux.aarch64-1.4.200.v20220812-1420.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.filesystem.linux.x86_64/1.2.500.v20260707-0813/org.eclipse.core.filesystem.linux.x86_64-1.2.500.v20260707-0813.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.core.filesystem.macosx/1.3.400.v20220812-1420/org.eclipse.core.filesystem.macosx-1.3.400.v20220812-1420.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.osgi.compatibility.state/1.3.100.v20260909-1123/org.eclipse.osgi.compatibility.state-1.3.100.v20260909-1123.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.equinox.weaving.hook/1.4.500.v20260821-1846/org.eclipse.equinox.weaving.hook-1.4.500.v20260821-1846.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/p2/osgi/bundle/org.eclipse.jdt.core.tests.builder.mockcompiler/1.0.200.v20250210-0737/org.eclipse.jdt.core.tests.builder.mockcompiler-1.0.200.v20250210-0737.jar"/>
+		<classpath id="FOLDER" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/org/osgi/org.osgi.service.event/1.4.1/org.osgi.service.event-1.4.1.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/org/osgi/org.osgi.service.metatype.annotations/1.4.1/org.osgi.service.metatype.annotations-1.4.1.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/org/osgi/org.osgi.annotation.versioning/1.1.2/org.osgi.annotation.versioning-1.1.2.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/org/osgi/org.osgi.annotation.bundle/1.1.1/org.osgi.annotation.bundle-1.1.1.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/org/osgi/org.osgi.service.cm/1.6.1/org.osgi.service.cm-1.6.1.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/org/eclipse/pde/org.eclipse.pde.api.tools.annotations/1.4.100/org.eclipse.pde.api.tools.annotations-1.4.100.jar"/>
+		<classpath id="JAR" path="/home/runner/.m2/repository/org/osgi/org.osgi.service.component.annotations/1.5.1/org.osgi.service.component.annotations-1.5.1.jar"/>
+	</classpaths>
+	<sources>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/AbstractRuntimeClasspathEntry.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/AbstractRuntimeClasspathEntry.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/ClasspathContainerSourceContainerTypeDelegate.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/ClasspathContainerSourceContainerTypeDelegate.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/ClasspathShortener.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/ClasspathShortener.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/ClasspathVariableSourceContainerTypeDelegate.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/ClasspathVariableSourceContainerTypeDelegate.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/CommandLineQuoting.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/CommandLineQuoting.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/CommandLineShortener.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/CommandLineShortener.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/CompositeId.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/CompositeId.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/DefaultEntryResolver.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/DefaultEntryResolver.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/DefaultProjectClasspathEntry.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/DefaultProjectClasspathEntry.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/DetectVMInstallationsJob.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/DetectVMInstallationsJob.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/EECompilationParticipant.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/EECompilationParticipant.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/EEVMInstall.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/EEVMInstall.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/EEVMType.java">
+			<problems errors="0" infos="0" problems="2" warnings="2">
+				<problem categoryID="110" charEnd="2313" charStart="2311" id="UsingDeprecatedSinceVersionConstructor" line="64" optionKey="org.eclipse.jdt.core.compiler.problem.deprecation" problemID="67110271" severity="WARNING">
+					<message value="The constructor URL(String) is deprecated since version 20"/>
+					<source_context sourceEnd="16" sourceStart="14" value="URL url = new URL(javadoc);"/>
+					<arguments>
+						<argument value="java.net.URL"/>
+						<argument value="java.lang.String"/>
+						<argument value="20"/>
+					</arguments>
+				</problem>
+				<problem categoryID="110" charEnd="3314" charStart="3312" id="UsingDeprecatedSinceVersionConstructor" line="94" optionKey="org.eclipse.jdt.core.compiler.problem.deprecation" problemID="67110271" severity="WARNING">
+					<message value="The constructor URL(String) is deprecated since version 20"/>
+					<source_context sourceEnd="16" sourceStart="14" value="URL url = new URL(index);"/>
+					<arguments>
+						<argument value="java.net.URL"/>
+						<argument value="java.lang.String"/>
+						<argument value="20"/>
+					</arguments>
+				</problem>
+			</problems>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/EEVMType.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/IProcessTempFileCreator.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/IProcessTempFileCreator.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JREContainer.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/JREContainer$RuleKey.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/JREContainer.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/JREContainer$RuleEntry.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/JREContainer$1.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JREContainerInitializer.java">
+			<problems errors="0" infos="0" problems="1" warnings="1">
+				<problem categoryID="110" charEnd="13067" charStart="13065" id="UsingDeprecatedSinceVersionConstructor" line="354" optionKey="org.eclipse.jdt.core.compiler.problem.deprecation" problemID="67110271" severity="WARNING">
+					<message value="The constructor URL(String) is deprecated since version 20"/>
+					<source_context sourceEnd="24" sourceStart="22" value="javadocLocation = new URL(url);"/>
+					<arguments>
+						<argument value="java.net.URL"/>
+						<argument value="java.lang.String"/>
+						<argument value="20"/>
+					</arguments>
+				</problem>
+			</problems>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/JREContainerInitializer.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JREPreferenceModifyListener.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/JREPreferenceModifyListener.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/JREPreferenceModifyListener$Visitor.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JRERuntimeClasspathEntryResolver.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/JRERuntimeClasspathEntryResolver.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JavaAppletLaunchConfigurationDelegate.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/JavaAppletLaunchConfigurationDelegate.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JavaClasspathVariablesInitializer.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/JavaClasspathVariablesInitializer.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JavaFxLibraryResolver.java">
+			<problems errors="0" infos="0" problems="1" warnings="1">
+				<problem categoryID="110" charEnd="2093" charStart="2091" id="UsingDeprecatedSinceVersionConstructor" line="62" optionKey="org.eclipse.jdt.core.compiler.problem.deprecation" problemID="67110271" severity="WARNING">
+					<message value="The constructor URL(String) is deprecated since version 20"/>
+					<source_context sourceEnd="13" sourceStart="11" value="return new URL(JAVAFX_8_JAVADOC);"/>
+					<arguments>
+						<argument value="java.net.URL"/>
+						<argument value="java.lang.String"/>
+						<argument value="20"/>
+					</arguments>
+				</problem>
+			</problems>
+			<tasks tasks="1">
+				<task charEnd="1951" charStart="1834" line="58">
+					<message value="TODO: We don&apos;t know if JavaSE-9 will ship JavaFX in the ext folder as well. If yes, then we have to use something like"/>
+					<source_context sourceEnd="119" sourceStart="2" value="* TODO: We don&apos;t know if JavaSE-9 will ship JavaFX in the ext folder as well. If yes, then we have to use something like"/>
+				</task>
+			</tasks>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/JavaFxLibraryResolver.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JavaLaunchableTester.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/JavaLaunchableTester.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JavaLaunchingUtils.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/JavaLaunchingUtils.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JavaMigrationDelegate.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/JavaMigrationDelegate.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JavaProjectSourceContainerTypeDelegate.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/JavaProjectSourceContainerTypeDelegate.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JavaRemoteApplicationLaunchConfigurationDelegate.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/JavaRemoteApplicationLaunchConfigurationDelegate.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JavaSourceLookupDirector.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/JavaSourceLookupDirector.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/JavaSourceLookupUtil.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/JavaSourceLookupUtil.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/LaunchingMessages.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/LaunchingMessages.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/LaunchingPlugin.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/LaunchingPlugin$VMChanges$1.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/LaunchingPlugin$1.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/LaunchingPlugin$1$1.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/LaunchingPlugin.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/LaunchingPlugin$JREUpdateJob.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/LaunchingPlugin$VMChanges.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/LaunchingPreferenceInitializer.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/LaunchingPreferenceInitializer.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/LibraryInfo.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/LibraryInfo.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/MacInstalledJREs.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/MacInstalledJREs$MacVMStandin.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/MacInstalledJREs.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/PListParser.java">
+			<problems errors="0" infos="0" problems="2" warnings="2">
+				<problem categoryID="120" charEnd="3683" charStart="3676" id="LambdaParameterIsNeverUsed" line="105" optionKey="org.eclipse.jdt.core.compiler.problem.unusedLambdaParameter" problemID="536871193" severity="WARNING">
+					<message value="The value of the lambda parameter publicId is not used"/>
+					<source_context sourceEnd="33" sourceStart="26" value="parser.setEntityResolver((publicId, systemId) -&gt; new InputSource(new ByteArrayInputStream(new byte[0])));"/>
+					<arguments>
+						<argument value="publicId"/>
+					</arguments>
+				</problem>
+				<problem categoryID="120" charEnd="3693" charStart="3686" id="LambdaParameterIsNeverUsed" line="105" optionKey="org.eclipse.jdt.core.compiler.problem.unusedLambdaParameter" problemID="536871193" severity="WARNING">
+					<message value="The value of the lambda parameter systemId is not used"/>
+					<source_context sourceEnd="43" sourceStart="36" value="parser.setEntityResolver((publicId, systemId) -&gt; new InputSource(new ByteArrayInputStream(new byte[0])));"/>
+					<arguments>
+						<argument value="systemId"/>
+					</arguments>
+				</problem>
+			</problems>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/PListParser.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/PackageFragmentRootSourceContainerTypeDelegate.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/PackageFragmentRootSourceContainerTypeDelegate.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/ProjectClasspathVariableResolver.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/ProjectClasspathVariableResolver.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/RuntimeClasspathEntry.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/RuntimeClasspathEntry.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/RuntimeClasspathEntryListComparator.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/RuntimeClasspathEntryListComparator.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/RuntimeClasspathEntryResolver.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/RuntimeClasspathEntryResolver.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/RuntimeClasspathProvider.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/RuntimeClasspathProvider.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/SocketAttachConnector.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/SocketAttachConnector.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/SocketListenConnector.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/SocketListenConnector.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/SocketListenConnectorProcess.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/SocketListenConnectorProcess.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/SocketListenConnectorProcess$1.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/SocketListenConnectorProcess$WaitForConnectionJob.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/StandardVM.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/StandardVM.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/StandardVMDebugger.java">
+			<tasks tasks="1">
+				<task charEnd="20504" charStart="20441" line="578">
+					<message value="XXX: Revisit - allows us to put a quote (&quot;) around the classpath"/>
+					<source_context sourceEnd="66" sourceStart="3" value="// XXX: Revisit - allows us to put a quote (&quot;) around the classpath"/>
+				</task>
+			</tasks>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/StandardVMDebugger$ConnectRunnable.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/StandardVMDebugger.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/StandardVMRunner.java">
+			<tasks tasks="1">
+				<task charEnd="12117" charStart="12091" line="348">
+					<message value="XXX JDKs Javadoc specifies:"/>
+					<source_context sourceEnd="29" sourceStart="3" value="// XXX JDKs Javadoc specifies:"/>
+				</task>
+			</tasks>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/StandardVMRunner$CommandDetails.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/StandardVMRunner.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/StandardVMType.java">
+			<problems errors="0" infos="0" problems="1" warnings="1">
+				<problem categoryID="120" charEnd="3967" charStart="3964" id="LambdaParameterIsNeverUsed" line="101" optionKey="org.eclipse.jdt.core.compiler.problem.unusedLambdaParameter" problemID="536871193" severity="WARNING">
+					<message value="The value of the lambda parameter arg0 is not used"/>
+					<source_context sourceEnd="52" sourceStart="49" value="private static FilenameFilter fgArchiveFilter = (arg0, arg1) -&gt; arg1.endsWith(&quot;.zip&quot;) || arg1.endsWith(&quot;.jar&quot;); //$NON-NLS-1$ //$NON-NLS-2$"/>
+					<arguments>
+						<argument value="arg0"/>
+					</arguments>
+				</problem>
+			</problems>
+			<tasks tasks="1">
+				<task charEnd="17083" charStart="16995" line="448">
+					<message value="TODO: Bug 489207: Temporary workaround for Jigsaw-previews that don&apos;t declare a bootpath."/>
+					<source_context sourceEnd="91" sourceStart="3" value="// TODO: Bug 489207: Temporary workaround for Jigsaw-previews that don&apos;t declare a bootpath."/>
+				</task>
+			</tasks>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/StandardVMType.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/VMDefinitionsContainer.java">
+			<problems errors="0" infos="0" problems="3" warnings="3">
+				<problem categoryID="110" charEnd="22527" charStart="22525" id="UsingDeprecatedSinceVersionConstructor" line="598" optionKey="org.eclipse.jdt.core.compiler.problem.deprecation" problemID="67110271" severity="WARNING">
+					<message value="The constructor URL(String) is deprecated since version 20"/>
+					<source_context sourceEnd="35" sourceStart="33" value="vmStandin.setJavadocLocation(new URL(externalForm));"/>
+					<arguments>
+						<argument value="java.net.URL"/>
+						<argument value="java.lang.String"/>
+						<argument value="20"/>
+					</arguments>
+				</problem>
+				<problem categoryID="110" charEnd="24629" charStart="24627" id="UsingDeprecatedSinceVersionConstructor" line="647" optionKey="org.eclipse.jdt.core.compiler.problem.deprecation" problemID="67110271" severity="WARNING">
+					<message value="The constructor URL(String) is deprecated since version 20"/>
+					<source_context sourceEnd="18" sourceStart="16" value="javadocURL= new URL(jreJavadoc);"/>
+					<arguments>
+						<argument value="java.net.URL"/>
+						<argument value="java.lang.String"/>
+						<argument value="20"/>
+					</arguments>
+				</problem>
+				<problem categoryID="110" charEnd="24922" charStart="24920" id="UsingDeprecatedSinceVersionConstructor" line="658" optionKey="org.eclipse.jdt.core.compiler.problem.deprecation" problemID="67110271" severity="WARNING">
+					<message value="The constructor URL(String) is deprecated since version 20"/>
+					<source_context sourceEnd="16" sourceStart="14" value="indexURL= new URL(jreIndex);"/>
+					<arguments>
+						<argument value="java.net.URL"/>
+						<argument value="java.lang.String"/>
+						<argument value="20"/>
+					</arguments>
+				</problem>
+			</problems>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/VMDefinitionsContainer.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/VMListener.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/VMListener.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/VariableClasspathEntry.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/VariableClasspathEntry.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/VariableClasspathResolver.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/VariableClasspathResolver.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/environments" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/environments/AccessRuleParticipant.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/environments/AccessRuleParticipant.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/environments" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/environments/Analyzer.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/environments/Analyzer.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/environments" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/environments/DefaultAccessRuleParticipant.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/environments/DefaultAccessRuleParticipant.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/environments" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/environments/EnvironmentMessages.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/environments/EnvironmentMessages.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/environments" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/environments/EnvironmentsManager.java">
+			<tasks tasks="2">
+				<task charEnd="10917" charStart="10893" line="315">
+					<message value="TODO: progress reporting?"/>
+					<source_context sourceEnd="27" sourceStart="3" value="// TODO: progress reporting?"/>
+				</task>
+				<task charEnd="15261" charStart="15237" line="447">
+					<message value="TODO: progress reporting?"/>
+					<source_context sourceEnd="27" sourceStart="3" value="// TODO: progress reporting?"/>
+				</task>
+			</tasks>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/environments/EnvironmentsManager.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/environments" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/environments/ExecutionEnvironment.java">
+			<tasks tasks="1">
+				<task charEnd="13693" charStart="13671" line="444">
+					<message value="TODO: use safe runnable"/>
+					<source_context sourceEnd="25" sourceStart="3" value="// TODO: use safe runnable"/>
+				</task>
+			</tasks>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/environments/ExecutionEnvironment.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/environments/ExecutionEnvironment$1.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/environments" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/environments/ExecutionEnvironmentAnalyzer.java">
+			<tasks tasks="1">
+				<task charEnd="1734" charStart="1624" line="42">
+					<message value="XXX: Note that this string is not yet standardized by OSGi, see http://wiki.osgi.org/wiki/Execution_Environment"/>
+					<source_context sourceEnd="113" sourceStart="3" value="// XXX: Note that this string is not yet standardized by OSGi, see http://wiki.osgi.org/wiki/Execution_Environment"/>
+				</task>
+			</tasks>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/environments/ExecutionEnvironmentAnalyzer.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/environments" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/environments/ExecutionEnvironmentVariableResolver.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/environments/ExecutionEnvironmentVariableResolver.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/macosx" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/macosx/MacOSXDebugVMRunner.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/macosx/MacOSXDebugVMRunner.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/macosx" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/macosx/MacOSXVMInstall.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/macosx/MacOSXVMInstall.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/macosx" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/macosx/MacOSXVMInstallType.java">
+			<problems errors="0" infos="0" problems="1" warnings="1">
+				<problem categoryID="110" charEnd="13904" charStart="13902" id="UsingDeprecatedSinceVersionConstructor" line="422" optionKey="org.eclipse.jdt.core.compiler.problem.deprecation" problemID="67110271" severity="WARNING">
+					<message value="The constructor URL(String, String, String) is deprecated since version 20"/>
+					<source_context sourceEnd="13" sourceStart="11" value="return new URL(&quot;file&quot;, &quot;&quot;, s);	//$NON-NLS-1$ //$NON-NLS-2$"/>
+					<arguments>
+						<argument value="java.net.URL"/>
+						<argument value="java.lang.String, java.lang.String, java.lang.String"/>
+						<argument value="20"/>
+					</arguments>
+				</problem>
+			</problems>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/macosx/MacOSXVMInstallType.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/macosx" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/macosx/MacOSXVMRunner.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/macosx/MacOSXVMRunner.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/macosx" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/macosx/Messages.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/macosx/Messages.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/sourcelookup/advanced" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/AdvancedRemoteJavaLaunchDelegate.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/AdvancedRemoteJavaLaunchDelegate.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/sourcelookup/advanced" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/AdvancedSourceLookupDirector.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/AdvancedSourceLookupDirector.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/sourcelookup/advanced" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/AdvancedSourceLookupSupport.java">
+			<tasks tasks="2">
+				<task charEnd="1568" charStart="1530" line="38">
+					<message value="TODO consider moving to LaunchingPlugin"/>
+					<source_context sourceEnd="41" sourceStart="3" value="// TODO consider moving to LaunchingPlugin"/>
+				</task>
+				<task charEnd="1742" charStart="1704" line="41">
+					<message value="TODO consider moving to LaunchingPlugin"/>
+					<source_context sourceEnd="41" sourceStart="3" value="// TODO consider moving to LaunchingPlugin"/>
+				</task>
+			</tasks>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/AdvancedSourceLookupSupport.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/sourcelookup/advanced" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/BackgroundProcessingJob.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/BackgroundProcessingJob.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/sourcelookup/advanced" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/CompositeSourceContainer.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/CompositeSourceContainer.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/sourcelookup/advanced" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/DefaultProjectDescriber.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/DefaultProjectDescriber.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/sourcelookup/advanced" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/FileHashing.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/FileHashing$HasherImpl$1.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/FileHashing$HashCode.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/FileHashing$HasherImpl.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/FileHashing$Hasher.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/FileHashing.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/FileHashing$CacheKey.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/sourcelookup/advanced" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/IJDIHelpers.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/IJDIHelpers.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/sourcelookup/advanced" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/IRunnableWithProgress.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/IRunnableWithProgress.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/sourcelookup/advanced" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/JDIHelpers.java">
+			<tasks tasks="1">
+				<task charEnd="5458" charStart="5394" line="156">
+					<message value="TODO consider ignoring DebugException for all IJDIHeloper methods"/>
+					<source_context sourceEnd="67" sourceStart="3" value="// TODO consider ignoring DebugException for all IJDIHeloper methods"/>
+				</task>
+			</tasks>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/JDIHelpers$1.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/JDIHelpers.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/sourcelookup/advanced" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/JDIStratumPropertyTester.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/JDIStratumPropertyTester.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/sourcelookup/advanced" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/JavaagentVariableResolver.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/JavaagentVariableResolver.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/sourcelookup/advanced" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/Messages.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/Messages.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/internal/launching/sourcelookup/advanced" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/internal/launching/sourcelookup/advanced/WorkspaceProjectSourceContainers.java">
+			<tasks tasks="3">
+				<task charEnd="3772" charStart="3706" line="87">
+					<message value="TODO review, this looks too complicated to add/remove java projects"/>
+					<source_context sourceEnd="69" sourceStart="3" value="// TODO review, this looks too complicated to add/remove java projects"/>
+				</task>
+				<task charEnd="5948" charStart="5853" line="149">
+					<message value="TODO decide what happens if the same location is associated with multiple package fragment roots"/>
+					<source_context sourceEnd="98" sourceStart="3" value="// TODO decide what happens if the same location is associated with multiple package fragment roots"/>
+				</task>
+				<task charEnd="11868" charStart="11775" line="314">
+					<message value="TODO this can take significant time for large workspaces, consider running on multiple threads"/>
+					<source_context sourceEnd="96" sourceStart="3" value="// TODO this can take significant time for large workspaces, consider running on multiple threads"/>
+				</task>
+			</tasks>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/WorkspaceProjectSourceContainers$1.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/WorkspaceProjectSourceContainers.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/WorkspaceProjectSourceContainers$JavaProjectDescriptionBuilder.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/WorkspaceProjectSourceContainers$2.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/internal/launching/sourcelookup/advanced/WorkspaceProjectSourceContainers$JavaProjectDescription.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/AbstractJavaLaunchConfigurationDelegate.java">
+			<tasks tasks="2">
+				<task charEnd="14082" charStart="13997" line="367">
+					<message value="TODO: this test does not tell us if the bootpath entries are different (could still be"/>
+					<source_context sourceEnd="88" sourceStart="3" value="// TODO: this test does not tell us if the bootpath entries are different (could still be"/>
+				</task>
+				<task charEnd="45404" charStart="45356" line="1198">
+					<message value="TODO: revisit to examine other possible solutions"/>
+					<source_context sourceEnd="51" sourceStart="3" value="// TODO: revisit to examine other possible solutions"/>
+				</task>
+			</tasks>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/AbstractJavaLaunchConfigurationDelegate.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/AbstractVMInstall.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/AbstractVMInstall.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/AbstractVMInstallType.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/AbstractVMInstallType.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/AbstractVMRunner.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/AbstractVMRunner.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/ExecutionArguments.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/ExecutionArguments.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IJavaLaunchConfigurationConstants.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/IJavaLaunchConfigurationConstants.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/ILibraryLocationResolver.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/ILibraryLocationResolver.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IRuntimeClasspathEntry.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/IRuntimeClasspathEntry.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IRuntimeClasspathEntry2.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/IRuntimeClasspathEntry2.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IRuntimeClasspathEntryResolver.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/IRuntimeClasspathEntryResolver.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IRuntimeClasspathEntryResolver2.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/IRuntimeClasspathEntryResolver2.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IRuntimeClasspathProvider.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/IRuntimeClasspathProvider.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IRuntimeContainerComparator.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/IRuntimeContainerComparator.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IVMConnector.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/IVMConnector.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IVMInstall.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/IVMInstall.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IVMInstall2.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/IVMInstall2.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IVMInstall3.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/IVMInstall3.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IVMInstallChangedListener.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/IVMInstallChangedListener.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IVMInstallType.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/IVMInstallType.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/IVMRunner.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/IVMRunner.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/JavaLaunchDelegate.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/JavaLaunchDelegate.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/JavaRuntime.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/JavaRuntime.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/JavaRuntime$PathWithRelease.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/LibraryLocation.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/LibraryLocation.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/PropertyChangeEvent.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/PropertyChangeEvent.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/SocketUtil.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/SocketUtil.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/StandardClasspathProvider.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/StandardClasspathProvider.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/StandardSourcePathProvider.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/StandardSourcePathProvider.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/StandardSourcePathProvider$UniqueList.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/VMRunnerConfiguration.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/VMRunnerConfiguration.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/VMStandin.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/VMStandin.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/environments" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/environments/CompatibleEnvironment.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/environments/CompatibleEnvironment.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/environments" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/environments/ExecutionEnvironmentDescription.java">
+			<problems errors="0" infos="0" problems="1" warnings="1">
+				<problem categoryID="120" charEnd="15494" charStart="15494" id="LambdaParameterIsNeverUsed" line="398" optionKey="org.eclipse.jdt.core.compiler.problem.unusedLambdaParameter" problemID="536871193" severity="WARNING">
+					<message value="The value of the lambda parameter k is not used"/>
+					<source_context sourceEnd="25" sourceStart="25" value="eeProperties.replaceAll((k, value) -&gt; value != null ? resolveHome(value, eeHome) : &quot;&quot;); //$NON-NLS-1$"/>
+					<arguments>
+						<argument value="k"/>
+					</arguments>
+				</problem>
+			</problems>
+			<tasks tasks="1">
+				<task charEnd="12922" charStart="12873" line="316">
+					<message value="TODO: remove once getProperties() has been removed"/>
+					<source_context sourceEnd="88" sourceStart="39" value="value = resolveHome(value, eeHome); // TODO: remove once getProperties() has been removed"/>
+				</task>
+			</tasks>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/environments/ExecutionEnvironmentDescription.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/environments" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/environments/IAccessRuleParticipant.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/environments/IAccessRuleParticipant.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/environments" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/environments/IExecutionEnvironment.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/environments/IExecutionEnvironment.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/environments" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/environments/IExecutionEnvironmentAnalyzerDelegate.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/environments/IExecutionEnvironmentAnalyzerDelegate.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/environments" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/environments/IExecutionEnvironmentsManager.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/environments/IExecutionEnvironmentsManager.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/sourcelookup" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/ArchiveSourceLocation.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/sourcelookup/ArchiveSourceLocation.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/sourcelookup" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/DirectorySourceLocation.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/sourcelookup/DirectorySourceLocation.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/sourcelookup" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/IJavaSourceLocation.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/sourcelookup/IJavaSourceLocation.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/sourcelookup" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/JavaProjectSourceLocation.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/sourcelookup/JavaProjectSourceLocation.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/sourcelookup" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/JavaSourceLocator.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/sourcelookup/JavaSourceLocator.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/sourcelookup" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/LocalFileStorage.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/sourcelookup/LocalFileStorage.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/sourcelookup" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/PackageFragmentRootSourceLocation.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/sourcelookup/PackageFragmentRootSourceLocation.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/sourcelookup" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/ZipEntryStorage.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/sourcelookup/ZipEntryStorage.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/sourcelookup/advanced" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/advanced/AdvancedJavaLaunchDelegate.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/sourcelookup/advanced/AdvancedJavaLaunchDelegate.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/sourcelookup/advanced" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/advanced/AdvancedSourceLookup.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/sourcelookup/advanced/AdvancedSourceLookup.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/sourcelookup/advanced" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/advanced/AdvancedSourceLookupParticipant.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/sourcelookup/advanced/AdvancedSourceLookupParticipant.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/sourcelookup/advanced" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/advanced/ISourceContainerResolver.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/sourcelookup/advanced/ISourceContainerResolver.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/sourcelookup/advanced" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/advanced/IWorkspaceProjectDescriber.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/sourcelookup/advanced/IWorkspaceProjectDescriber$IJavaProjectSourceDescription.class"/>
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/sourcelookup/advanced/IWorkspaceProjectDescriber.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/sourcelookup/containers" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/containers/ClasspathContainerSourceContainer.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/sourcelookup/containers/ClasspathContainerSourceContainer.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/sourcelookup/containers" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/containers/ClasspathVariableSourceContainer.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/sourcelookup/containers/ClasspathVariableSourceContainer.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/sourcelookup/containers" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/containers/JavaProjectSourceContainer.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/sourcelookup/containers/JavaProjectSourceContainer.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/sourcelookup/containers" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/containers/JavaSourceLookupParticipant.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/sourcelookup/containers/JavaSourceLookupParticipant.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/sourcelookup/containers" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/containers/JavaSourcePathComputer.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/sourcelookup/containers/JavaSourcePathComputer.class"/>
+		</source>
+		<source output="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes" package="org/eclipse/jdt/launching/sourcelookup/containers" path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/launching/org/eclipse/jdt/launching/sourcelookup/containers/PackageFragmentRootSourceContainer.java">
+			<classfile path="/home/runner/work/eclipse.jdt.debug/eclipse.jdt.debug/org.eclipse.jdt.launching/target/classes/org/eclipse/jdt/launching/sourcelookup/containers/PackageFragmentRootSourceContainer.class"/>
+		</source>
+	</sources>
+	<stats>
+		<problem_summary errors="0" infos="0" problems="29" tasks="17" warnings="12"/>
+		<number_of_classfiles value="160"/>
+	</stats>
+</compiler>
