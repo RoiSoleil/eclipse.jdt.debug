@@ -1,0 +1,3 @@
+MAVEN_EXIT=0
+SHA=2df0ceb03e8756c89bf4b59a6b32f7941440cd90
+JOB=baseline
