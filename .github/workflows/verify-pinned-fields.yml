@@ -110,17 +110,23 @@ jobs:
             EXTRA="-Ptest-on-javase-27"
           fi
           set +e
-          mvn -B -V clean verify $EXTRA \
-            -Papi-check \
-            -pl org.eclipse.jdt.debug.ui,org.eclipse.jdt.debug.tests -am \
-            -Dcompare-version-with-baselines.skip=false \
-            -Dtycho.apitools.debug \
-            -DtestClass="$TEST_CLASS" \
-            -Dmaven.test.failure.ignore=true \
-            -Dproject.build.sourceEncoding=UTF-8 \
-            -DDetectVMInstallationsJob.disabled=true \
-            -DtrimStackTrace=false > ci-results/build.log 2>&1
-          status=$?
+          # retry the transient Maven resolution failure "Invalid Collect Request"
+          for attempt in 1 2 3; do
+            mvn -B -V -e clean verify $EXTRA \
+              -Papi-check \
+              -pl org.eclipse.jdt.debug.ui,org.eclipse.jdt.debug.tests -am \
+              -Dcompare-version-with-baselines.skip=false \
+              -Dtycho.apitools.debug \
+              -DtestClass="$TEST_CLASS" \
+              -Dmaven.test.failure.ignore=true \
+              -Dproject.build.sourceEncoding=UTF-8 \
+              -DDetectVMInstallationsJob.disabled=true \
+              -DtrimStackTrace=false > ci-results/build.log 2>&1
+            status=$?
+            grep -q "Invalid Collect Request" ci-results/build.log || break
+            echo "Transient resolution failure, attempt $attempt"
+            cp ci-results/build.log "ci-results/build-attempt-$attempt.log"
+          done
           tail -80 ci-results/build.log
           echo "MAVEN_EXIT=$status" >> ci-results/status.txt
           exit $status
