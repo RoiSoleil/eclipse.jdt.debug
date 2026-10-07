@@ -1,0 +1,146 @@
+name: Build and verify the Pin to Top jar for Eclipse 4.41
+
+on:
+  push:
+    branches: [ pin-fields-to-top-4.41 ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  jar-4-41:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Install X server, window manager, xdotool and tools
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q xvfb openbox x11-utils xdotool imagemagick netcat-openbsd xz-utils
+
+      - name: Find the exact version of org.eclipse.jdt.debug.ui in the 4.41 release
+        run: |
+          mkdir -p ci-results dist
+          REPO=https://download.eclipse.org/eclipse/updates/4.41
+          composite=$(curl -fsSL "$REPO/compositeArtifacts.xml" 2>/dev/null || (curl -fsSL "$REPO/compositeArtifacts.jar" -o c.jar && unzip -p c.jar compositeArtifacts.xml))
+          echo "$composite" | grep -o "location='[^']*'" | tee ci-results/release-children.txt
+          CHILD=$(echo "$composite" | grep -o "location='[^']*'" | sed "s/location='//;s/'//" | grep "R-4.41" | tail -1)
+          CHILD=${CHILD%/}
+          echo "Release repository: $CHILD"
+          case "$CHILD" in http*) URL="$CHILD" ;; *) URL="$REPO/$CHILD" ;; esac
+          artifacts=$(curl -fsSL "$URL/artifacts.xml.xz" 2>/dev/null | xz -d || (curl -fsSL "$URL/artifacts.jar" -o a.jar && unzip -p a.jar artifacts.xml))
+          VERSION=$(echo "$artifacts" | grep -o "id='org.eclipse.jdt.debug.ui' version='[^']*'" | head -1 | sed "s/.*version='//;s/'//")
+          echo "org.eclipse.jdt.debug.ui in 4.41: $VERSION"
+          test -n "$VERSION"
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+          echo "DROP=$(basename "$CHILD")" >> "$GITHUB_ENV"
+          echo "VERSION=$VERSION" >> ci-results/status.txt
+          echo "DROP=$(basename "$CHILD")" >> ci-results/status.txt
+
+      - name: Build against 4.41 and run the Pin to Top tests in a 4.41 workbench
+        env:
+          PIN_SCREENSHOTS: ${{ github.workspace }}/ci-results/screenshots
+          GDK_BACKEND: x11
+          DISPLAY: ':99'
+        run: |
+          mkdir -p "$PIN_SCREENSHOTS"
+          Xvfb :99 -screen 0 1600x1000x24 &
+          sleep 3
+          openbox &
+          sleep 2
+          set +e
+          mvn -B -V clean verify \
+            -pl org.eclipse.jdt.debug.ui,org.eclipse.jdt.debug.tests -am \
+            -DtestClass=org.eclipse.jdt.debug.tests.PinnedFieldsSuite \
+            -Dmaven.test.failure.ignore=true \
+            -Dproject.build.sourceEncoding=UTF-8 \
+            -DDetectVMInstallationsJob.disabled=true \
+            -DtrimStackTrace=false > ci-results/build.log 2>&1
+          status=$?
+          tail -60 ci-results/build.log
+          echo "MAVEN_EXIT=$status" >> ci-results/status.txt
+          exit $status
+
+      - name: Give the jar the exact version of the 4.41 bundle
+        run: |
+          built=$(ls org.eclipse.jdt.debug.ui/target/org.eclipse.jdt.debug.ui-*.jar | grep -v sources | head -1)
+          echo "Built: $built"
+          python3 - "$built" "dist/org.eclipse.jdt.debug.ui_${VERSION}.jar" "$VERSION" <<'EOF'
+          import re, sys, zipfile
+          src, dst, version = sys.argv[1:]
+          with zipfile.ZipFile(src) as zin, zipfile.ZipFile(dst, 'w', zipfile.ZIP_DEFLATED) as zout:
+              names = zin.namelist()
+              # the manifest first, as in any jar
+              for name in sorted(names, key=lambda n: (n != 'META-INF/MANIFEST.MF', names.index(n))):
+                  if re.match(r'META-INF/[^/]+\.(SF|RSA|DSA|EC)$', name):
+                      continue
+                  data = zin.read(name)
+                  if name == 'META-INF/MANIFEST.MF':
+                      text = data.decode('utf-8')
+                      text, count = re.subn(r'^Bundle-Version: .*$', 'Bundle-Version: ' + version, text, flags=re.M)
+                      assert count == 1, 'Bundle-Version not found'
+                      data = text.encode('utf-8')
+                  zout.writestr(zin.getinfo(name), data)
+          print('Written', dst)
+          EOF
+          unzip -p "dist/org.eclipse.jdt.debug.ui_${VERSION}.jar" META-INF/MANIFEST.MF | grep -E "Bundle-(SymbolicName|Version|RequiredExecutionEnvironment)" | tee -a ci-results/status.txt
+          unzip -l "dist/org.eclipse.jdt.debug.ui_${VERSION}.jar" | grep -E "PinnedFieldsManager|MovePinHandler|pinned_ovr|plugin.xml" | tee ci-results/jar-content.txt
+          sha256sum dist/*.jar | tee -a ci-results/status.txt
+
+      - name: Install the jar in the official Eclipse SDK 4.41 and start it
+        env:
+          DISPLAY: ':99'
+          GDK_BACKEND: x11
+        run: |
+          curl -fsSL -o sdk.tar.gz "https://download.eclipse.org/eclipse/downloads/drops4/${DROP}/eclipse-SDK-4.41-linux-gtk-x86_64.tar.gz"
+          tar xzf sdk.tar.gz
+          target="eclipse/plugins/org.eclipse.jdt.debug.ui_${VERSION}.jar"
+          if [ ! -f "$target" ]; then
+            echo "SDK_JAR=missing" >> ci-results/status.txt
+            ls eclipse/plugins | grep jdt.debug.ui | tee -a ci-results/status.txt
+            exit 1
+          fi
+          echo "SDK_JAR=$target" >> ci-results/status.txt
+          # replace the jar exactly as the user will do
+          cp "dist/org.eclipse.jdt.debug.ui_${VERSION}.jar" "$target"
+          ./eclipse/eclipse -nosplash -clean -data "$RUNNER_TEMP/ws" -consoleLog -console 5555 \
+            -vmargs -Dosgi.console.enable.builtin=false > ci-results/sdk-console.log 2>&1 &
+          sleep 90
+          import -window root ci-results/screenshots/sdk-4.41-started.png || true
+          { sleep 2; echo "ss org.eclipse.jdt.debug.ui"; sleep 2; echo "start org.eclipse.jdt.debug.ui"; sleep 5; \
+            echo "ss org.eclipse.jdt.debug.ui"; sleep 2; echo "diag org.eclipse.jdt.debug.ui"; sleep 2; \
+            echo "headers org.eclipse.jdt.debug.ui"; sleep 2; echo "disconnect"; sleep 1; echo "y"; sleep 1; } \
+            | nc -q 5 localhost 5555 > ci-results/osgi-console.txt 2>&1 || true
+          sleep 5
+          import -window root ci-results/screenshots/sdk-4.41-after-start.png || true
+          cp "$RUNNER_TEMP/ws/.metadata/.log" ci-results/sdk-workspace.log 2>/dev/null || echo "no workspace log" > ci-results/sdk-workspace.log
+          strings ci-results/osgi-console.txt | grep -E "org.eclipse.jdt.debug.ui|ACTIVE|RESOLVED|INSTALLED|STARTING|unresolved|Missing" | tee -a ci-results/status.txt
+
+      - name: Collect results
+        if: always()
+        run: |
+          mkdir -p ci-results
+          for d in */target/surefire-reports */target/compilelogs; do
+            [ -d "$d" ] && mkdir -p "ci-results/$d" && cp -r "$d"/. "ci-results/$d/"
+          done
+          for f in */target/work/data/.metadata/.log; do
+            [ -f "$f" ] && mkdir -p "ci-results/$(dirname "$f")" && cp "$f" "ci-results/$f"
+          done
+          cp dist/*.jar ci-results/ 2>/dev/null || true
+          echo "SHA=$(git rev-parse HEAD)" >> ci-results/status.txt
+
+      - name: Publish results to the pin-fields-4.41-jar branch
+        if: always()
+        run: |
+          cd ci-results
+          git init -q -b results
+          git add -A
+          git -c user.name="ci" -c user.email="ci@users.noreply.github.com" commit -q -m "Pin to Top jar for Eclipse 4.41"
+          git push -q -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" HEAD:pin-fields-4.41-jar
