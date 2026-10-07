@@ -78,6 +78,12 @@ jobs:
           distribution: temurin
           java-version: ${{ matrix.javas }}
 
+      # Maven 3.10 rejects the p2 artifacts of Tycho whose classifier is a path (e.g. lib/ant-antlr.jar)
+      - uses: stCarolas/setup-maven@v5
+        if: inputs.only == '' || contains(format(',{0},', inputs.only), format(',{0},', matrix.name))
+        with:
+          maven-version: 3.9.16
+
       - name: Install X server, window manager and xdotool
         if: runner.os == 'Linux' && (inputs.only == '' || contains(format(',{0},', inputs.only), format(',{0},', matrix.name)))
         run: |
