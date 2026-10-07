@@ -1,0 +1,11 @@
+VERSION=3.15.500.v20260722-1406
+DROP=R-4.41-202608281142
+MAVEN_EXIT=0
+Bundle-SymbolicName: org.eclipse.jdt.debug.ui; singleton:=true
+Bundle-Version: 3.15.500.v20260722-1406
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+32cf883ec0e4977744a2511a99832e5daa29e9d618f9712de5a7162edddbb7f2  dist/org.eclipse.jdt.debug.ui_3.15.500.v20260722-1406.jar
+SDK_JAR=eclipse/plugins/org.eclipse.jdt.debug.ui_3.15.500.v20260722-1406.jar
+198	STARTING    org.eclipse.jdt.debug.ui_3.15.500.v20260722-1406
+198	ACTIVE      org.eclipse.jdt.debug.ui_3.15.500.v20260722-1406
+SHA=718810093b3e5f8ac822171d2561e356df054276
