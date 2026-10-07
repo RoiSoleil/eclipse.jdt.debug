@@ -67,6 +67,12 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 			"PinnedField", "PinField", "MovePin", "UnpinAll");
 
 	private IJavaThread fThread;
+	/**
+	 * The suspended frame and its <code>this</code>, captured on suspend: the top frame of the thread is not available
+	 * while the views evaluate the details of the values
+	 */
+	private IJavaStackFrame fFrame;
+	private IJavaObject fThis;
 	private String fViewId;
 	private final List<IStatus> fLoggedErrors = new CopyOnWriteArrayList<>();
 	private final ILogListener fLogListener = (status, plugin) -> {
@@ -245,11 +251,10 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 	public void testNoErrorForOtherSelections() throws Exception {
 		TreeViewer viewer = launchAndShowThis(IDebugUIConstants.ID_VARIABLE_VIEW);
 		waitForChildren(viewer);
-		IJavaStackFrame frame = (IJavaStackFrame) fThread.getTopStackFrame();
 		IViewPart debugView = openView(IDebugUIConstants.ID_DEBUG_VIEW);
 		sync(() -> {
 			getActivePage().activate(debugView);
-			TreePath path = new TreePath(new Object[] { fThread.getLaunch(), fThread.getDebugTarget(), fThread, frame });
+			TreePath path = new TreePath(new Object[] { fThread.getLaunch(), fThread.getDebugTarget(), fThread, fFrame });
 			debugView.getAdapter(IDebugView.class).getViewer().setSelection(new TreeSelection(path), true);
 			return null;
 		});
@@ -284,8 +289,10 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 		ILineBreakpoint bp = createLineBreakpoint(33, TYPE_NAME);
 		fThread = launchToLineBreakpoint(TYPE_NAME, bp);
 		assertNotNull("Launch unsuccessful", fThread);
-		IJavaStackFrame frame = (IJavaStackFrame) fThread.getTopStackFrame();
-		assertNotNull("Missing top frame", frame);
+		fFrame = (IJavaStackFrame) fThread.getTopStackFrame();
+		assertNotNull("Missing top frame", fFrame);
+		fThis = fFrame.getThis();
+		assertNotNull("'this' is null", fThis);
 
 		IViewPart part = openView(viewId);
 		TreeViewer viewer = (TreeViewer) part.getAdapter(IDebugView.class).getViewer();
@@ -390,9 +397,8 @@ public class PinnedFieldsViewTests extends AbstractDebugUiTests {
 	 */
 	protected List<String> waitForChildren(TreeViewer viewer) throws Exception {
 		assertFalse("No field should be pinned yet", PinnedFieldsManager.getDefault().hasPinnedFields());
-		IJavaObject object = ((IJavaStackFrame) fThread.getTopStackFrame()).getThis();
 		List<String> expected = new ArrayList<>();
-		for (Object field : JavaContentProviderFilter.filterVariables(object.getVariables(), new PresentationContext(fViewId))) {
+		for (Object field : JavaContentProviderFilter.filterVariables(fThis.getVariables(), new PresentationContext(fViewId))) {
 			expected.add(((IVariable) field).getName());
 		}
 		assertTrue("Unexpected fields: " + expected, expected.indexOf("privStr") > 0 && expected.contains("date"));

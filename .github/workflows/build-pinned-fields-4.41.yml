@@ -110,18 +110,24 @@ jobs:
           echo "SDK_JAR=$target" >> ci-results/status.txt
           # replace the jar exactly as the user will do
           cp "dist/org.eclipse.jdt.debug.ui_${VERSION}.jar" "$target"
-          ./eclipse/eclipse -nosplash -clean -data "$RUNNER_TEMP/ws" -consoleLog -console 5555 \
-            -vmargs -Dosgi.console.enable.builtin=false > ci-results/sdk-console.log 2>&1 &
-          sleep 90
+          # OSGi console on the standard input: check that the replaced bundle resolves and starts
+          mkfifo console-in
+          { sleep 90; echo "ss org.eclipse.jdt.debug.ui"; sleep 3; echo "equinox:start org.eclipse.jdt.debug.ui"; sleep 10; \
+            echo "ss org.eclipse.jdt.debug.ui"; sleep 3; echo "diag org.eclipse.jdt.debug.ui"; sleep 3; \
+            echo "headers org.eclipse.jdt.debug.ui"; sleep 5; } > console-in &
+          ./eclipse/eclipse -nosplash -clean -data "$RUNNER_TEMP/ws" -consoleLog -console \
+            -vmargs -Dosgi.console.enable.builtin=false < console-in > ci-results/sdk-console.log 2>&1 &
+          ECLIPSE_PID=$!
+          sleep 80
           import -window root ci-results/screenshots/sdk-4.41-started.png || true
-          { sleep 2; echo "ss org.eclipse.jdt.debug.ui"; sleep 2; echo "start org.eclipse.jdt.debug.ui"; sleep 5; \
-            echo "ss org.eclipse.jdt.debug.ui"; sleep 2; echo "diag org.eclipse.jdt.debug.ui"; sleep 2; \
-            echo "headers org.eclipse.jdt.debug.ui"; sleep 2; echo "disconnect"; sleep 1; echo "y"; sleep 1; } \
-            | nc -q 5 localhost 5555 > ci-results/osgi-console.txt 2>&1 || true
-          sleep 5
+          sleep 45
           import -window root ci-results/screenshots/sdk-4.41-after-start.png || true
-          cp "$RUNNER_TEMP/ws/.metadata/.log" ci-results/sdk-workspace.log 2>/dev/null || echo "no workspace log" > ci-results/sdk-workspace.log
-          strings ci-results/osgi-console.txt | grep -E "org.eclipse.jdt.debug.ui|ACTIVE|RESOLVED|INSTALLED|STARTING|unresolved|Missing" | tee -a ci-results/status.txt
+          kill $ECLIPSE_PID || true
+          sleep 5
+          cp "$RUNNER_TEMP/ws/.metadata/.log" ci-results/sdk-workspace.log 2>/dev/null || echo "no workspace log: nothing was logged" > ci-results/sdk-workspace.log
+          grep -E "org.eclipse.jdt.debug.ui_|ACTIVE|RESOLVED|INSTALLED|STARTING|No unresolved|Missing|unresolved" ci-results/sdk-console.log | tee -a ci-results/status.txt
+          # fail if the bundle is not active
+          grep -E "ACTIVE +org.eclipse.jdt.debug.ui_${VERSION}" ci-results/sdk-console.log
 
       - name: Collect results
         if: always()

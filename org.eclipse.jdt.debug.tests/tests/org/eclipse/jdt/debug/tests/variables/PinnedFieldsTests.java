@@ -205,13 +205,13 @@ public class PinnedFieldsTests extends AbstractDebugTest {
 	}
 
 	private IJavaObject getThis() throws Exception {
-		IJavaObject object = ((IJavaStackFrame) fThread.getTopStackFrame()).getThis();
+		IJavaObject object = topFrame().getThis();
 		assertNotNull("'this' is null", object);
 		return object;
 	}
 
 	private IJavaObject getSubclassInstance() throws Exception {
-		IVariable ivt = findVariable((IJavaStackFrame) fThread.getTopStackFrame(), "ivt");
+		IVariable ivt = findVariable(topFrame(), "ivt");
 		assertNotNull("Could not find variable 'ivt'", ivt);
 		return (IJavaObject) ivt.getValue();
 	}
@@ -222,5 +222,20 @@ public class PinnedFieldsTests extends AbstractDebugTest {
 			names.add(((IVariable) variable).getName());
 		}
 		return names;
+	}
+
+	/**
+	 * Returns the top frame of the suspended thread, waiting while it is not available (e.g. while the views evaluate
+	 * the details of the values).
+	 */
+	private IJavaStackFrame topFrame() throws Exception {
+		long end = System.currentTimeMillis() + DEFAULT_TIMEOUT;
+		IJavaStackFrame frame = (IJavaStackFrame) fThread.getTopStackFrame();
+		while (frame == null && System.currentTimeMillis() < end) {
+			Thread.sleep(50);
+			frame = (IJavaStackFrame) fThread.getTopStackFrame();
+		}
+		assertNotNull("Missing top frame", frame);
+		return frame;
 	}
 }
