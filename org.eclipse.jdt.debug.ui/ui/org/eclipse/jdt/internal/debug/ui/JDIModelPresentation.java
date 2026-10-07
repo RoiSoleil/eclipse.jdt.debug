@@ -95,6 +95,7 @@ import org.eclipse.jdt.internal.debug.ui.monitors.JavaWaitingThread;
 import org.eclipse.jdt.internal.debug.ui.monitors.NoMonitorInformationElement;
 import org.eclipse.jdt.internal.debug.ui.monitors.ThreadMonitorManager;
 import org.eclipse.jdt.internal.debug.ui.snippeteditor.SnippetMessages;
+import org.eclipse.jdt.internal.debug.ui.variables.PinnedFieldsManager;
 import org.eclipse.jdt.internal.ui.JavaPlugin;
 import org.eclipse.jdt.internal.ui.javaeditor.EditorUtility;
 import org.eclipse.jdt.ui.ISharedImages;
@@ -915,7 +916,7 @@ public class JDIModelPresentation extends LabelProvider implements IDebugModelPr
 	protected Image getVariableImage(IAdaptable element) {
 		CompositeImageDescriptor descriptor = new JavaElementImageDescriptor(
 			computeBaseImageDescriptor(element), computeAdornmentFlags(element), BIG_SIZE);
-		descriptor = new JDIElementImageDescriptor(descriptor, computeLogicalStructureAdornmentFlags(element), BIG_SIZE);
+		descriptor = new JDIElementImageDescriptor(descriptor, computeLogicalStructureAdornmentFlags(element) | computePinnedAdornmentFlags(element), BIG_SIZE);
 		Image image = JDIDebugUIPlugin.getImageDescriptorRegistry().get(descriptor);
 
 		return image;
@@ -1140,6 +1141,13 @@ public class JDIModelPresentation extends LabelProvider implements IDebugModelPr
 			// no need to log errors - elements may no longer exist by the time we render them
 		}
 		return flags;
+	}
+
+	private int computePinnedAdornmentFlags(IAdaptable element) {
+		if (element instanceof IJavaFieldVariable field && PinnedFieldsManager.getDefault().isPinned(field)) {
+			return JDIImageDescriptor.PINNED;
+		}
+		return 0;
 	}
 
 	private int computeLogicalStructureAdornmentFlags(IAdaptable element) {
