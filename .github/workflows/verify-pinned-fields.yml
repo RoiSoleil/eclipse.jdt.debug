@@ -144,6 +144,10 @@ jobs:
         shell: bash
         run: |
           cd ci-results
+          # GitHub refuses files over 100 MB: keep the end of the big logs
+          find . -type f -size +40M -print | while read -r f; do
+            tail -c 30000000 "$f" > "$f.tail" && mv "$f.tail" "$f" && echo "truncated $f"
+          done
           git init -q -b results
           git add -A
           git -c user.name="ci" -c user.email="ci@users.noreply.github.com" commit -q -m "CI results of ${{ matrix.name }}"
