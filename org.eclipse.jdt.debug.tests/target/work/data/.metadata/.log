@@ -1,0 +1,19 @@
+!SESSION 2026-10-07 14:50:09.075 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=25.0.4.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -application org.eclipse.tycho.surefire.osgibooter.uitest -testproperties D:\a\eclipse.jdt.debug\eclipse.jdt.debug\org.eclipse.jdt.debug.tests\target\surefire.properties -timeout 2400000
+Command-line arguments:  -data D:\a\eclipse.jdt.debug\eclipse.jdt.debug\org.eclipse.jdt.debug.tests\target\work\data -application org.eclipse.tycho.surefire.osgibooter.uitest -testproperties D:\a\eclipse.jdt.debug\eclipse.jdt.debug\org.eclipse.jdt.debug.tests\target\surefire.properties -consoleLog -timeout 2400000
+
+!ENTRY org.eclipse.e4.ui.css.swt.theme 2 0 2026-10-07 14:50:11.197
+!MESSAGE Theme 'org.eclipse.e4.ui.css.theme.e4_default' not found; falling back to default theme.
+
+!ENTRY org.eclipse.tycho.surefire.osgibooter 1 0 2026-10-07 14:50:15.684
+!MESSAGE starting DumpStackTracesTimer with timeout=2280000 at 2026-10-07 14:50:15 +0000
+
+!ENTRY org.eclipse.jdt.debug 1 0 2026-10-07 14:50:16.419
+!MESSAGE VM added x64, location: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\25.0.4-101.0\x64
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-10-07 14:51:26.776
+!MESSAGE The workspace will exit with unsaved changes in this session.
